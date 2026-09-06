@@ -1,53 +1,54 @@
 {
   "schema_version": 1,
-  "suite_version": "0.1.0",
-  "released_at": "2026-09-06T12:10:00+08:00",
-  "release_asset": "novel-manju-chain-suite-0.1.0.zip",
-  "release_sha256": "8770fc4666bcebbe6e15cc636640d5f66edc939750c3b7c6d3d9d97f7c0cc87b",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.1.0",
+  "suite_version": "0.2.0",
+  "released_at": "2026-09-06T14:42:56+08:00",
+  "release_asset": "novel-manju-chain-suite-0.2.0.zip",
+  "release_sha256": "1ae0e30335c0b020288684a3bea04bf1ec8d4175e6db6d6ac14a5d4f2549e631",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.2.0",
   "minimum_installer_version": "0.1.0",
   "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-06T12:10:00+08:00",
-  "title": "首次便携发行",
-  "summary": "建立小说与剧本共用的漫剧生产链、独立安装包、统一更新日志和网站发布结构。",
-  "compatibility": "首次安装；更新后需要重新加载 Codex 或开启新任务。",
+  "published_at": "2026-09-06T14:42:56+08:00",
+  "title": "独立 Skill 发行、完整指南与安全更新",
+  "summary": "提供三个独立 Skill 包和四个中文指南，统一组件历史、下载校验及旧版保留；修复安装恢复、更新解压和重复确认边界。",
+  "compatibility": "更新后需重新加载宿主。独立包使用套件发行版本，不代表业务 Skill 自身升级；资产包附带两个辅助技能。0.1.0 保持原包不变，回退到该版仍有固定输出目录假设且不识别新版版本固定设置。历史尚不足三个旧版，不虚构。",
   "components": [
     {
       "id": "novel-manju-chain-agent",
-      "name": "小说/漫剧链式 Agent 编排技能",
-      "change_type": "added",
-      "summary": "小说先转完整剧本，随后与既有剧本共用审查、确认修订、冻结、资产和导演分镜链路。"
+      "name": "小说/漫剧链式 Agent",
+      "change_type": "fixed",
+      "summary": "区分维护与正式创作，复用同范围授权；更新器验证来源、版本、哈希和压缩包路径，支持指定历史版本及版本固定，安装后明确要求重载。"
     },
     {
       "id": "short-drama-write",
       "name": "短剧/漫剧剧本创作 Skill",
-      "change_type": "bundled",
-      "summary": "纳入原版镜像与便携发布包，作为小说转剧本、剧本审查和定向修订入口。"
+      "change_type": "packaging",
+      "summary": "新增独立发行包、使用指南和组件历史入口；本次不修改剧本业务规则与模板。"
     },
     {
       "id": "manju-director-v5-2",
       "name": "漫剧导演 Skill v5.2",
-      "change_type": "bundled",
-      "summary": "纳入原版镜像与便携发布包，负责冻结剧本后的导演分镜与视频提示词。"
+      "change_type": "packaging",
+      "summary": "新增独立发行包、使用指南和组件历史入口；导演业务版本仍为 v5.2，本次不修改分镜规则。"
     },
     {
       "id": "manju-asset-image-pipeline",
       "name": "漫剧资产总控 Agent",
-      "change_type": "portable-overlay",
-      "summary": "纳入原版镜像与便携发布包；发布副本把本机绝对依赖路径改为按已安装 Skill 名解析。"
+      "change_type": "fixed",
+      "summary": "输出改为用户确认的可写项目目录，不再要求发布者固定盘符；独立包包含人物卡与场景九宫格辅助技能。"
     },
     {
-      "id": "manju-character-card",
-      "name": "人物资产四视图与角色卡",
-      "change_type": "portable-overlay",
-      "summary": "保留本机原版镜像；发布副本增加可配置资料库路径和离线提示词快照回退。"
+      "id": "release-system",
+      "name": "发行与安装系统",
+      "change_type": "fixed",
+      "summary": "安装锁、隔离备份、失败恢复与确认回退；历史哈希不可覆盖，草稿包下载校验后发布，保留全部旧 Release。新增仓库维护规则与安全测试。"
     },
     {
-      "id": "manju-scene-grid",
-      "name": "真实场景九宫格设计",
-      "change_type": "portable-overlay",
-      "summary": "保留本机原版镜像；发布副本增加可配置资料库路径和离线提示词快照回退。"
+      "id": "website",
+      "name": "中文官网",
+      "change_type": "added",
+      "summary": "四个独立指南提供能力、安装、工作机制、可复制调用、边界、下载与历史；独立包和套件分别显示 SHA256，历史同源并按组件筛选。"
     }
   ],
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.2.0/novel-manju-chain-suite-0.2.0.zip",
   "private_download": true
 }

@@ -1,0 +1,107 @@
+.version-archive {
+  margin-top: 34px;
+}
+
+.archive-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+
+.archive-head span,
+.version-title span {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+
+.archive-head h3 {
+  margin: 4px 0 0;
+  font-size: 26px;
+}
+
+.archive-head p {
+  max-width: 580px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.version-downloads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.version-card {
+  padding: 22px;
+}
+
+.version-title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.version-title h4 {
+  margin: 2px 0 0;
+  font-size: 26px;
+}
+
+.version-title time {
+  color: var(--muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.version-card p {
+  font-size: 14px;
+}
+
+.version-card > code {
+  display: block;
+  padding: 10px;
+  background: #e9eadf;
+  border-radius: 8px;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.version-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.version-actions a {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.version-actions .download-button {
+  padding: 10px 13px;
+  border-radius: 9px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .version-downloads {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-head {
+    display: block;
+  }
+
+  .archive-head p {
+    margin-top: 10px;
+  }
+}
