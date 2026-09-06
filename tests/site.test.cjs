@@ -60,7 +60,12 @@ test('each guide filters unified history by exact component', async () => {
     assert.ok(!view.get('#guide-history').innerHTML.includes('UNRELATED_MARKER'));
     const component = history.releases[0].components.find(c => c.id === id);
     assert.ok(view.get('#guide-history').innerHTML.includes(component.summary));
-    assert.ok(view.get('#guide-downloads').innerHTML.includes('novel-manju-chain-suite-0.1.0.zip'));
+    const downloads = view.get('#guide-downloads').innerHTML;
+    const displayed = load('versions').versions;
+    for (const record of displayed) assert.ok(downloads.includes(record.release_asset));
+    for (const record of load('downloads').releases) {
+      if (!displayed.some(item => item.version === record.version)) assert.ok(!downloads.includes(record.release_asset));
+    }
   }
 });
 
@@ -88,7 +93,7 @@ test('guide rejects unsafe links and escapes component text', async () => {
   const versions = load('versions');
   versions.versions[0].download_url = 'https://evil.example/download';
   const history = load('update-history');
-  history.releases[0].components[1].summary = '<img src=x onerror=alert(1)>';
+  history.releases[0].components.find(component => component.id === 'short-drama-write').summary = '<img src=x onerror=alert(1)>';
   const view = await renderGuide('short-drama-write', {versions, 'update-history':history});
   assert.match(view.get('#guide-downloads').textContent, /不可信/);
   assert.ok(!view.get('#guide-history').innerHTML.includes('<img'));

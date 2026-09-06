@@ -1,30 +1,54 @@
 {
   "schema_version": 1,
-  "suite_version": "0.3.0",
-  "released_at": "2026-09-06T20:23:51+08:00",
-  "release_asset": "novel-manju-chain-suite-0.3.0.zip",
-  "release_sha256": "6d9d09e2648820da3a39f585892dea6a01ad738557324bbf6e3bc1edd28f4583",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.0",
+  "suite_version": "0.3.1",
+  "released_at": "2026-09-06T20:49:00+08:00",
+  "release_asset": "novel-manju-chain-suite-0.3.1.zip",
+  "release_sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.1",
   "minimum_installer_version": "0.1.0",
   "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-06T20:23:51+08:00",
-  "title": "导演分镜素材引用与镜头导航格式统一",
-  "summary": "更新漫剧导演 Skill v5.2 的未绑定素材引用规范：参考素材改用简短稳定资产名，并固定镜号、标题、时长三段式镜头导航。",
-  "compatibility": "更新后需重新加载宿主或开启新任务。导演业务版本仍为 v5.2；未绑定参考素材不再输出管线字段，旧项目若继续生产应统一采用新的简短资产引用名，已绑定素材不应被误报为未绑定。",
+  "published_at": "2026-09-06T20:49:00+08:00",
+  "title": "Skill 内置维护发布入口与统一同步规则",
+  "summary": "三个业务 Skill 与链式 Agent 内置维护说明：优化验证完成后询问是否同步 GitHub，获准后按统一记录发布并更新官网；普通创作不触发发布。",
+  "compatibility": "更新后需重新加载宿主或开启新任务。创作正文和业务版本不变；发布需要维护仓库克隆与写权限，不自动部署本机全局规则，不进行每小时轮询。跨电脑宿主行为尚未实测。",
   "components": [
+    {
+      "id": "novel-manju-chain-agent",
+      "name": "小说/漫剧链式 Agent",
+      "change_type": "changed",
+      "summary": "编排 Skill 和 Agent 配置增加条件维护路由；维护任务不启动创作或消费端升级流程，保留原有创作契约。"
+    },
+    {
+      "id": "short-drama-write",
+      "name": "短剧/漫剧剧本创作 Skill",
+      "change_type": "changed",
+      "summary": "内置维护发布说明和固定仓库地址；规则、模板或脚本优化验证完成后检查差异并询问同步，不改变剧本创作正文。"
+    },
     {
       "id": "manju-director-v5-2",
       "name": "漫剧导演 Skill v5.2",
       "change_type": "changed",
-      "summary": "将未绑定参考素材固定为“@图片N：资产引用名称”，要求同一资产及显著状态逐字复用同名引用；新增“镜号＋标题＋时长”导航格式及编号、时长一致性约束。"
+      "summary": "内置维护发布说明，核对实际编辑源并复用同范围授权；保留 0.3.0 导演规则，不夹带其他任务差异。"
+    },
+    {
+      "id": "manju-asset-image-pipeline",
+      "name": "漫剧资产总控 Agent",
+      "change_type": "changed",
+      "summary": "内置维护发布说明及统一日志、发布校验与网站同步要求；普通资产生产不触发发布。"
     },
     {
       "id": "release-system",
       "name": "发行与安装系统",
-      "change_type": "fixed",
-      "summary": "构建套件包时把内置更新检查器的 VERSION 写为当前套件版本，避免同步本机组件后安装包仍自报上一版本。"
+      "change_type": "changed",
+      "summary": "新增仓库维护登记入口，明确组件源、发行与官网地址、源差异隔离和授权复用。本机全局入口不打包给其他电脑。"
+    },
+    {
+      "id": "website",
+      "name": "中文官网",
+      "change_type": "changed",
+      "summary": "同步本版统一更新说明、时间、组件历史与下载校验信息；展示最近三个版本下载，GitHub 保留当前版及三个旧版。修正写死 0.1.0 链接及组件数组位置的测试，核验实际展示版本及隐藏旧版。"
     }
   ],
-  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/novel-manju-chain-suite-0.3.0.zip",
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/novel-manju-chain-suite-0.3.1.zip",
   "private_download": true
 }

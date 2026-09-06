@@ -6,6 +6,45 @@
   "minimum_previous_releases": 3,
   "versions": [
     {
+      "version": "0.3.1",
+      "published_at": "2026-09-06T20:49:00+08:00",
+      "release_asset": "novel-manju-chain-suite-0.3.1.zip",
+      "release_sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4",
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.1",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/novel-manju-chain-suite-0.3.1.zip",
+      "component_assets": {
+        "short-drama-write": {
+          "release_asset": "short-drama-write-0.3.1.zip",
+          "release_sha256": "049b720b25d516f68fffb1602f515e39d6b2f44cc873a72b221148616f1df8be",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/short-drama-write-0.3.1.zip",
+          "included_skills": [
+            "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.1.zip",
+          "release_sha256": "ca946517a15b06a19444aeb9f6c7cf19f6c4965a2c2c175125245a4770928610",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/manju-director-v5-2-0.3.1.zip",
+          "included_skills": [
+            "manju-director-v5-2"
+          ]
+        },
+        "manju-asset-image-pipeline": {
+          "release_asset": "manju-asset-image-pipeline-0.3.1.zip",
+          "release_sha256": "4eca9eaef1406b7d637b2741f7b004cafa648bd3523680f1a3f63f72980e88cf",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/manju-asset-image-pipeline-0.3.1.zip",
+          "included_skills": [
+            "manju-asset-image-pipeline",
+            "manju-character-card",
+            "manju-scene-grid"
+          ]
+        }
+      },
+      "title": "Skill 内置维护发布入口与统一同步规则",
+      "summary": "三个业务 Skill 与链式 Agent 内置维护说明：优化验证完成后询问是否同步 GitHub，获准后按统一记录发布并更新官网；普通创作不触发发布。",
+      "compatibility": "更新后需重新加载宿主或开启新任务。创作正文和业务版本不变；发布需要维护仓库克隆与写权限，不自动部署本机全局规则，不进行每小时轮询。跨电脑宿主行为尚未实测。"
+    },
+    {
       "version": "0.3.0",
       "published_at": "2026-09-06T20:23:51+08:00",
       "release_asset": "novel-manju-chain-suite-0.3.0.zip",
@@ -82,17 +121,6 @@
       "title": "独立 Skill 发行、完整指南与安全更新",
       "summary": "提供三个独立 Skill 包和四个中文指南，统一组件历史、下载校验及旧版保留；修复安装恢复、更新解压和重复确认边界。",
       "compatibility": "更新后需重新加载宿主。独立包使用套件发行版本，不代表业务 Skill 自身升级；资产包附带两个辅助技能。0.1.0 保持原包不变，回退到该版仍有固定输出目录假设且不识别新版版本固定设置。历史尚不足三个旧版，不虚构。"
-    },
-    {
-      "version": "0.1.0",
-      "published_at": "2026-09-06T12:10:00+08:00",
-      "release_asset": "novel-manju-chain-suite-0.1.0.zip",
-      "release_sha256": "8770fc4666bcebbe6e15cc636640d5f66edc939750c3b7c6d3d9d97f7c0cc87b",
-      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.1.0",
-      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.1.0/novel-manju-chain-suite-0.1.0.zip",
-      "title": "首次便携发行",
-      "summary": "建立小说与剧本共用的漫剧生产链、独立安装包、统一更新日志和网站发布结构。",
-      "compatibility": "首次安装；更新后需要重新加载 Codex 或开启新任务。"
     }
   ]
 }

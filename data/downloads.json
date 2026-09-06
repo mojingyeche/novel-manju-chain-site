@@ -2,6 +2,42 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "0.3.1",
+      "published_at": "2026-09-06T20:49:00+08:00",
+      "release_asset": "novel-manju-chain-suite-0.3.1.zip",
+      "release_sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4",
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.1",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/novel-manju-chain-suite-0.3.1.zip",
+      "component_assets": {
+        "short-drama-write": {
+          "release_asset": "short-drama-write-0.3.1.zip",
+          "release_sha256": "049b720b25d516f68fffb1602f515e39d6b2f44cc873a72b221148616f1df8be",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/short-drama-write-0.3.1.zip",
+          "included_skills": [
+            "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.1.zip",
+          "release_sha256": "ca946517a15b06a19444aeb9f6c7cf19f6c4965a2c2c175125245a4770928610",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/manju-director-v5-2-0.3.1.zip",
+          "included_skills": [
+            "manju-director-v5-2"
+          ]
+        },
+        "manju-asset-image-pipeline": {
+          "release_asset": "manju-asset-image-pipeline-0.3.1.zip",
+          "release_sha256": "4eca9eaef1406b7d637b2741f7b004cafa648bd3523680f1a3f63f72980e88cf",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/manju-asset-image-pipeline-0.3.1.zip",
+          "included_skills": [
+            "manju-asset-image-pipeline",
+            "manju-character-card",
+            "manju-scene-grid"
+          ]
+        }
+      }
+    },
+    {
       "version": "0.3.0",
       "published_at": "2026-09-06T20:23:51+08:00",
       "release_asset": "novel-manju-chain-suite-0.3.0.zip",
