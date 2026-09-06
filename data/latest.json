@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "suite_version": "0.1.0",
+  "released_at": null,
+  "release_asset": "novel-manju-chain-suite-0.1.0.zip",
+  "release_sha256": "ed0db4b98deb2897b556aecb0ee9e9d40e8d43cb40bd25063ecc13f54c020d51",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.1.0",
+  "minimum_installer_version": "0.1.0",
+  "suite_name": "小说/漫剧链式 Agent",
+  "published_at": "2026-09-06T12:10:00+08:00",
+  "title": "首次便携发行",
+  "summary": "建立小说与剧本共用的漫剧生产链、独立安装包、统一更新日志和网站发布结构。",
+  "compatibility": "首次安装；更新后需要重新加载 Codex 或开启新任务。",
+  "components": [
+    {
+      "id": "novel-manju-chain-agent",
+      "name": "小说/漫剧链式 Agent 编排技能",
+      "change_type": "added",
+      "summary": "小说先转完整剧本，随后与既有剧本共用审查、确认修订、冻结、资产和导演分镜链路。"
+    },
+    {
+      "id": "short-drama-write",
+      "name": "短剧/漫剧剧本创作 Skill",
+      "change_type": "bundled",
+      "summary": "纳入原版镜像与便携发布包，作为小说转剧本、剧本审查和定向修订入口。"
+    },
+    {
+      "id": "manju-director-v5-2",
+      "name": "漫剧导演 Skill v5.2",
+      "change_type": "bundled",
+      "summary": "纳入原版镜像与便携发布包，负责冻结剧本后的导演分镜与视频提示词。"
+    },
+    {
+      "id": "manju-asset-image-pipeline",
+      "name": "漫剧资产总控 Agent",
+      "change_type": "portable-overlay",
+      "summary": "纳入原版镜像与便携发布包；发布副本把本机绝对依赖路径改为按已安装 Skill 名解析。"
+    },
+    {
+      "id": "manju-character-card",
+      "name": "人物资产四视图与角色卡",
+      "change_type": "portable-overlay",
+      "summary": "保留本机原版镜像；发布副本增加可配置资料库路径和离线提示词快照回退。"
+    },
+    {
+      "id": "manju-scene-grid",
+      "name": "真实场景九宫格设计",
+      "change_type": "portable-overlay",
+      "summary": "保留本机原版镜像；发布副本增加可配置资料库路径和离线提示词快照回退。"
+    }
+  ],
+  "private_download": true
+}

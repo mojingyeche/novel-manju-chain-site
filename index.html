@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="小说/漫剧链式 Agent 官方中文指南：小说转剧本、剧本审查、资产统筹与导演分镜。">
+  <title>小说/漫剧链式 Agent｜官方中文指南</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><span class="mark">链</span><span>小说/漫剧链式 Agent</span></a>
+    <nav><a href="#features">能力</a><a href="#workflow">流程</a><a href="#install">安装</a><a href="#updates">更新记录</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow">NOVEL → SCRIPT → ASSETS → STORYBOARD</div>
+      <h1>从小说或剧本出发，<br><em>沿一条可确认、可追溯的链路</em>走到漫剧分镜。</h1>
+      <p class="lead">小说只多一步“转完整剧本”；之后统一进入剧本审查、确认修订、冻结、资产统筹和导演分镜。每个关键阶段都有明确门槛。</p>
+      <div class="actions">
+        <button class="primary" data-copy="调用小说/漫剧链式 Agent，先检查 GitHub Release 更新，再根据我提供的小说或剧本进入对应流程。">复制调用指令</button>
+        <a class="secondary" href="#install">查看安装方法</a>
+      </div>
+      <div class="release-card">
+        <div><span class="label">最新版本</span><strong id="latest-version">读取中</strong></div>
+        <div><span class="label">发布时间</span><strong id="latest-time">读取中</strong></div>
+        <div><span class="label">安装包</span><strong id="latest-asset">读取中</strong></div>
+        <a id="release-link" class="release-button" href="#install">获取最新版</a>
+      </div>
+    </section>
+
+    <section id="features" class="section shell">
+      <div class="section-head"><span>01</span><div><h2>它能帮你做什么</h2><p>不是一次性黑箱生成，而是把改编与制作拆成能检查、能确认的阶段。</p></div></div>
+      <div class="grid three">
+        <article><b>小说改编</b><h3>小说先成为完整剧本</h3><p>先确认时长、风格、平台和改编边界，再按漫剧节奏完成剧本，不额外绕行小说重写版。</p></article>
+        <article><b>剧本修订</b><h3>问题清单先于改写</h3><p>检查对白 AI 化、因果、人设、重复、格式、开篇和节奏；只有用户确认的问题才进入修订。</p></article>
+        <article><b>制作交付</b><h3>冻结后再做资产与分镜</h3><p>资产状态链与导演规划基于同一份冻结剧本，最终提示词绑定真实资产，不把占位符冒充成品。</p></article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section shell">
+      <div class="section-head"><span>02</span><div><h2>统一工作流</h2><p>小说入口与剧本入口最终汇合到同一条生产主链。</p></div></div>
+      <ol class="timeline">
+        <li><i>1</i><div><h3>识别输入与目标</h3><p>小说或剧本、目标时长、风格、受众平台、不可改内容。</p></div></li>
+        <li><i>2</i><div><h3>小说转完整剧本</h3><p>仅小说输入执行；完成后与已有剧本进入相同路径。</p></div></li>
+        <li><i>3</i><div><h3>只审查，不暗改</h3><p>给出位置证据、影响、严重程度和优化方案，等待用户确认。</p></div></li>
+        <li><i>4</i><div><h3>定向修订与冻结</h3><p>只改获准项目；全量复核后由用户确认冻结版本与哈希。</p></div></li>
+        <li><i>5</i><div><h3>资产统筹与导演规划</h3><p>从冻结剧本建立资产证据、状态链、视觉方向、调度和镜头设计。</p></div></li>
+        <li><i>6</i><div><h3>绑定资产的最终分镜</h3><p>检查人物动作、空间、对白对象、口型与跨镜承接后交付。</p></div></li>
+      </ol>
+    </section>
+
+    <section id="install" class="section shell">
+      <div class="section-head"><span>03</span><div><h2>安装与更新</h2><p>代码与安装包保存在私有仓库；获授权的使用者需要登录 GitHub。</p></div></div>
+      <div class="grid two">
+        <article class="install"><span>A</span><h3>交给 Agent 安装</h3><p>复制下面的安装指令，发给支持本地文件和 GitHub CLI 的智能体。它应先校验 SHA256，再备份并安装。</p><button data-copy="请从 mojingyeche/novel-manju-chain-suite 的最新 GitHub Release 下载小说/漫剧链式 Agent 安装包，核对官方网站公布的 SHA256，备份现有版本后安装。安装完成后告诉我备份路径，并提醒我重新加载或开启新任务。">复制安装提示</button></article>
+        <article class="install"><span>B</span><h3>每次调用先检查新版</h3><p>Agent 启动时读取公开版本清单。有新版先展示统一更新说明并询问；确认后才安装，安装后停止旧版本流程并要求重新加载。</p><code>UPDATE_AVAILABLE → 用户确认 → 安装 → 重新加载</code></article>
+      </div>
+      <p class="notice">私有下载说明：网站公开不等于安装包公开。未获得私有仓库访问权限时，可以阅读指南，但无法下载 Release。</p>
+    </section>
+
+    <section id="updates" class="section shell">
+      <div class="section-head"><span>04</span><div><h2>统一更新记录</h2><p>每次同步都记录北京时间、对应 Agent/Skill、版本、更新说明和兼容性影响。</p></div></div>
+      <div id="update-list" class="updates"><p>正在读取更新记录……</p></div>
+    </section>
+
+    <section class="section shell boundary">
+      <div class="section-head"><span>05</span><div><h2>能力边界</h2></div></div>
+      <p>网站不公开私有 Skill 正文、授权凭证或安装包。Agent 不会在剧本未冻结时进入资产与导演生产，也不会把未经验证的路径、哈希、资产或检查结果写成已经完成。</p>
+    </section>
+  </main>
+
+  <footer><div class="shell"><strong>小说/漫剧链式 Agent</strong><span>官方中文指南 · 更新数据与 GitHub Release 同源</span></div></footer>
+  <div id="toast" role="status">已复制</div>
+  <script src="assets/site.js"></script>
+</body>
+</html>
