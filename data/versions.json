@@ -6,6 +6,45 @@
   "minimum_previous_releases": 3,
   "versions": [
     {
+      "version": "0.3.0",
+      "published_at": "2026-09-06T20:23:51+08:00",
+      "release_asset": "novel-manju-chain-suite-0.3.0.zip",
+      "release_sha256": "6d9d09e2648820da3a39f585892dea6a01ad738557324bbf6e3bc1edd28f4583",
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.0",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/novel-manju-chain-suite-0.3.0.zip",
+      "component_assets": {
+        "short-drama-write": {
+          "release_asset": "short-drama-write-0.3.0.zip",
+          "release_sha256": "7a06cc6947d92eb67d446dd2928e94a3a9dda6b02e8c899f9a8db3cee2a4db7f",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/short-drama-write-0.3.0.zip",
+          "included_skills": [
+            "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.0.zip",
+          "release_sha256": "acef0ba32aeba28746cbf346596725a2a84dce73c3b7dd61505e9fa9300c5020",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/manju-director-v5-2-0.3.0.zip",
+          "included_skills": [
+            "manju-director-v5-2"
+          ]
+        },
+        "manju-asset-image-pipeline": {
+          "release_asset": "manju-asset-image-pipeline-0.3.0.zip",
+          "release_sha256": "9a75b891583274ffb8c6f889764f516a04df7eb83538e6b8a1d5abc099d24ac1",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/manju-asset-image-pipeline-0.3.0.zip",
+          "included_skills": [
+            "manju-asset-image-pipeline",
+            "manju-character-card",
+            "manju-scene-grid"
+          ]
+        }
+      },
+      "title": "导演分镜素材引用与镜头导航格式统一",
+      "summary": "更新漫剧导演 Skill v5.2 的未绑定素材引用规范：参考素材改用简短稳定资产名，并固定镜号、标题、时长三段式镜头导航。",
+      "compatibility": "更新后需重新加载宿主或开启新任务。导演业务版本仍为 v5.2；未绑定参考素材不再输出管线字段，旧项目若继续生产应统一采用新的简短资产引用名，已绑定素材不应被误报为未绑定。"
+    },
+    {
       "version": "0.2.0",
       "published_at": "2026-09-06T14:42:56+08:00",
       "release_asset": "novel-manju-chain-suite-0.2.0.zip",
