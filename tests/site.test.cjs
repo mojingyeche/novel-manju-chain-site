@@ -143,6 +143,21 @@ test('untrusted download URL is rejected', async () => {
   assert.match(view.get('#version-downloads').textContent, /不可信/);
 });
 
+test('WorkBuddy links use same version and reject unsafe destinations', async () => {
+  const data = load('versions');
+  const first = data.versions[0];
+  first.workbuddy = {sha256: 'a'.repeat(64), download_url: `https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/${first.version}/novel-manju-chain-suite-${first.version}-workbuddy.zip`};
+  const view = await render({versions:data});
+  assert.ok(view.get('#version-downloads').innerHTML.includes(first.workbuddy.download_url));
+  for (const id of ['novel-manju-chain-agent', ...guides.slice(1)]) {
+    const guide = await renderGuide(id, {versions:data});
+    assert.ok(guide.get('#guide-downloads').innerHTML.includes(first.workbuddy.download_url));
+  }
+  first.workbuddy.download_url = 'https://evil.example/package.zip';
+  assert.match((await render({versions:data})).get('#version-downloads').textContent, /不可信/);
+  assert.match((await renderGuide('novel-manju-chain-agent', {versions:data})).get('#guide-downloads').textContent, /不可信/);
+});
+
 test('published data agrees across all three manifests', () => {
   const latest = load('latest');
   const history = load('update-history').releases;

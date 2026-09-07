@@ -31,7 +31,8 @@ readData('versions').then(versions=>{
     <div class="version-title"><div><span>${index===0?'当前稳定版':'历史稳定版'}</span><h4>v${escapeHTML(release.version)}</h4></div><time>${formatTime(release.published_at)}</time></div>
     <p>${escapeHTML(release.title)} · ${escapeHTML(release.summary)}</p>
     <code>SHA256 ${escapeHTML(release.release_sha256)}</code>
-    <div class="version-actions"><a class="download-button" href="${releaseURL(release.download_url)}">下载 v${escapeHTML(release.version)}</a><a href="${releaseURL(release.release_url)}">查看更新说明</a></div>
+    <div class="version-actions"><a class="download-button" href="${releaseURL(release.download_url)}">Codex 套件 v${escapeHTML(release.version)}</a><a href="${releaseURL(release.release_url)}">查看更新说明</a></div>
+    ${release.workbuddy ? `<p>WorkBuddy 同版本安装与维护包（含六个 Skill、专家指令及中文说明）</p><code>SHA256 ${escapeHTML(release.workbuddy.sha256)}</code><div class="version-actions"><a class="download-button" href="${releaseURL(release.workbuddy.download_url)}">WorkBuddy v${escapeHTML(release.version)}</a></div>` : '<p>此历史版本未登记正式 WorkBuddy 安装包。</p>'}
   </article>`).join('');
 }).catch(error=>failure('#version-downloads', error));
 readData('update-history').then(history=>{

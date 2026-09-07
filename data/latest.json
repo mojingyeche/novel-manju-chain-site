@@ -1,54 +1,71 @@
 {
   "schema_version": 1,
-  "suite_version": "0.3.1",
-  "released_at": "2026-09-06T20:49:00+08:00",
-  "release_asset": "novel-manju-chain-suite-0.3.1.zip",
-  "release_sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.1",
+  "suite_version": "0.3.2",
+  "released_at": "2026-09-07T16:17:08+08:00",
+  "release_asset": "novel-manju-chain-suite-0.3.2.zip",
+  "release_sha256": "06839b0a6674a44988de1dadb6fafd85f25c0ca7794688dfdacf3b229414db6c",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.2",
   "minimum_installer_version": "0.1.0",
   "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-06T20:49:00+08:00",
-  "title": "Skill 内置维护发布入口与统一同步规则",
-  "summary": "三个业务 Skill 与链式 Agent 内置维护说明：优化验证完成后询问是否同步 GitHub，获准后按统一记录发布并更新官网；普通创作不触发发布。",
-  "compatibility": "更新后需重新加载宿主或开启新任务。创作正文和业务版本不变；发布需要维护仓库克隆与写权限，不自动部署本机全局规则，不进行每小时轮询。跨电脑宿主行为尚未实测。",
+  "published_at": "2026-09-07T16:17:08+08:00",
+  "title": "双端同版本交接、更新保护与组件案例入口",
+  "summary": "以正式 0.3.1 为不可覆盖基线，合并两端编剧能力并收紧轻喜剧触发；新增同版本 WorkBuddy 包、授权更新工具、三方差异准备与六组件案例入口。",
+  "compatibility": "Codex 与 WorkBuddy 共用 0.3.2，宿主通过包名区分。升级前保留可信旧包和本地改动；有未发布差异时拒绝覆盖，先合并。客户端重新加载、专家绑定与创作工具连接须实际验收，不承诺热重载。未经验证且未获分发批准的反馈不进入运行包。",
   "components": [
     {
       "id": "novel-manju-chain-agent",
       "name": "小说/漫剧链式 Agent",
-      "change_type": "changed",
-      "summary": "编排 Skill 和 Agent 配置增加条件维护路由；维护任务不启动创作或消费端升级流程，保留原有创作契约。"
+      "change_type": "packaging",
+      "summary": "发行包新增本组件案例入口及统一版本文件；WorkBuddy 增加宿主契约、专家说明和只读更新入口，禁用 Codex 专属安装器；创作与跨技能授权边界保留。"
     },
     {
       "id": "short-drama-write",
       "name": "短剧/漫剧剧本创作 Skill",
       "change_type": "changed",
-      "summary": "内置维护发布说明和固定仓库地址；规则、模板或脚本优化验证完成后检查差异并询问同步，不改变剧本创作正文。"
+      "summary": "合并全篇开篇重构、按需诊断、情绪曲线及 AI 可视化检查。轻喜剧须明确意图，3D 或漫剧媒介不自动触发喜剧，Q 版视觉另需授权。新增案例入口，未验证建议不升级为普适规则。"
     },
     {
       "id": "manju-director-v5-2",
       "name": "漫剧导演 Skill v5.2",
-      "change_type": "changed",
-      "summary": "内置维护发布说明，核对实际编辑源并复用同范围授权；保留 0.3.0 导演规则，不夹带其他任务差异。"
+      "change_type": "packaging",
+      "summary": "新增同版本案例入口及 WorkBuddy 宿主封装，保留已发布导演业务正文；不纳入其他任务的本地导演修改。"
     },
     {
       "id": "manju-asset-image-pipeline",
       "name": "漫剧资产总控 Agent",
-      "change_type": "changed",
-      "summary": "内置维护发布说明及统一日志、发布校验与网站同步要求；普通资产生产不触发发布。"
+      "change_type": "packaging",
+      "summary": "新增同版本案例入口及 WorkBuddy 宿主封装，保留原资产流程与授权边界。"
+    },
+    {
+      "id": "manju-character-card",
+      "name": "人物资产四视图与角色卡",
+      "change_type": "packaging",
+      "summary": "新增组件独立案例入口、统一版本文件及 WorkBuddy 封装，不改变人物卡业务规则。"
+    },
+    {
+      "id": "manju-scene-grid",
+      "name": "真实场景九宫格设计",
+      "change_type": "packaging",
+      "summary": "新增组件独立案例入口、统一版本文件及 WorkBuddy 封装，不改变场景业务规则。"
     },
     {
       "id": "release-system",
       "name": "发行与安装系统",
       "change_type": "changed",
-      "summary": "新增仓库维护登记入口，明确组件源、发行与官网地址、源差异隔离和授权复用。本机全局入口不打包给其他电脑。"
+      "summary": "新增 WorkBuddy 确定性附件构建、下载元数据、确认后下载与旧包逐文件核对、备份安装和失败恢复；增加定向源同步、三方候选及案例分发过滤。插件版本与套件对齐，保留旧版和同范围发布授权。"
     },
     {
       "id": "website",
       "name": "中文官网",
       "change_type": "changed",
-      "summary": "同步本版统一更新说明、时间、组件历史与下载校验信息；展示最近三个版本下载，GitHub 保留当前版及三个旧版。修正写死 0.1.0 链接及组件数组位置的测试，核验实际展示版本及隐藏旧版。"
+      "summary": "首页及各组件指南展示同版本 WorkBuddy 交接包与独立 SHA256，继续按统一历史显示时间、组件变化和最近三个稳定版本；没有宿主历史包时明确说明。"
     }
   ],
-  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/novel-manju-chain-suite-0.3.1.zip",
-  "private_download": true
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/novel-manju-chain-suite-0.3.2.zip",
+  "private_download": true,
+  "workbuddy": {
+    "asset": "novel-manju-chain-suite-0.3.2-workbuddy.zip",
+    "sha256": "32b76127aa7592751ea4bccc76052fb188ca87c6b347d52abe5ce8c8e0eb57e9",
+    "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/novel-manju-chain-suite-0.3.2-workbuddy.zip"
+  }
 }

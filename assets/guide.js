@@ -16,8 +16,9 @@ readGuideData('versions').then(data => {
   if (!versions.length) throw new Error('尚无稳定发行版');
   document.querySelector('#guide-downloads').innerHTML = versions.map((v, i) => {
     const asset = v.component_assets?.[guideId];
+    const hostPackage = v.workbuddy ? '<p><a href="' + trustedRelease(v.workbuddy.download_url) + '">下载 WorkBuddy 同版本交接包 ' + escapeText(v.version) + '</a>（含六个独立 Skill ZIP、专家指令与安装维护说明）</p><p class="hash">WorkBuddy SHA256：' + escapeText(v.workbuddy.sha256) + '</p>' : '<p>此版本未登记正式 WorkBuddy 包。</p>';
     const standalone = asset ? '<p><a href="' + trustedRelease(asset.download_url) + '">下载本 Skill 独立包 ' + escapeText(v.version) + '</a></p><p>包含目录：' + escapeText(asset.included_skills.join('、')) + '</p><p class="hash">独立包 SHA256：' + escapeText(asset.release_sha256) + '</p>' : (guideId === 'novel-manju-chain-agent' ? '' : '<p>此历史版本没有独立包，可从完整套件提取。</p>');
-    return '<article><h3>' + (i ? '历史套件版 ' : '当前套件版 ') + escapeText(v.version) + '</h3><p class="meta">北京时间：' + escapeText(v.published_at) + '</p><p>' + escapeText(v.title) + '</p>' + standalone + '<p><a href="' + trustedRelease(v.download_url) + '">下载完整套件 ' + escapeText(v.version) + '</a> · <a href="' + trustedRelease(v.release_url) + '">发行详情</a></p><p class="hash">套件 SHA256：' + escapeText(v.release_sha256) + '</p><p>' + escapeText(v.compatibility) + '</p></article>';
+    return '<article><h3>' + (i ? '历史套件版 ' : '当前套件版 ') + escapeText(v.version) + '</h3><p class="meta">北京时间：' + escapeText(v.published_at) + '</p><p>' + escapeText(v.title) + '</p>' + standalone + '<p><a href="' + trustedRelease(v.download_url) + '">下载完整套件 ' + escapeText(v.version) + '</a> · <a href="' + trustedRelease(v.release_url) + '">发行详情</a></p><p class="hash">套件 SHA256：' + escapeText(v.release_sha256) + '</p>' + hostPackage + '<p>' + escapeText(v.compatibility) + '</p></article>';
   }).join('');
 }).catch(error => { document.querySelector('#guide-downloads').textContent = '下载记录读取失败：' + error.message + '。请返回首页或稍后重试。'; });
 readGuideData('update-history').then(data => {
