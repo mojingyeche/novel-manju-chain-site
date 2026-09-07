@@ -6,6 +6,50 @@
   "minimum_previous_releases": 3,
   "versions": [
     {
+      "version": "0.3.3",
+      "published_at": "2026-09-07T18:16:00+08:00",
+      "release_asset": "novel-manju-chain-suite-0.3.3.zip",
+      "release_sha256": "0614a090080701854a2ad2ff6a783407b6368d88d6f9ff6f1a77ed39d7033c27",
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.3",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3.zip",
+      "component_assets": {
+        "short-drama-write": {
+          "release_asset": "short-drama-write-0.3.3.zip",
+          "release_sha256": "c870422e8f06c42d00da3143800dd007921cb9d5e057fb3ae83f3386dff8d244",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/short-drama-write-0.3.3.zip",
+          "included_skills": [
+            "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.3.zip",
+          "release_sha256": "5a2f5df2704961fa701b4697e9cb15ba0f1549dd222eec509449a04c8d0b4bd4",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/manju-director-v5-2-0.3.3.zip",
+          "included_skills": [
+            "manju-director-v5-2"
+          ]
+        },
+        "manju-asset-image-pipeline": {
+          "release_asset": "manju-asset-image-pipeline-0.3.3.zip",
+          "release_sha256": "b90d69c2fc026350c6417d70f80a77ab5d663c17ff109cd359d7a520284f7489",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/manju-asset-image-pipeline-0.3.3.zip",
+          "included_skills": [
+            "manju-asset-image-pipeline",
+            "manju-character-card",
+            "manju-scene-grid"
+          ]
+        }
+      },
+      "title": "导演多模态引用预算与双端同版本更新",
+      "summary": "合并已审查的导演五文件修改，增加参考素材分类计数、重复定义和超额检查；保持导演方案、剧情和跨技能授权边界。",
+      "compatibility": "Codex 与 WorkBuddy 共用0.3.3，导演业务版本仍为v5.2。旧项目不自动重写；未核实的入口总数限制不编造。原生17项检查器测试通过不代表真实出片效果或客户端重载已验证。升级保留可信旧包与备份，不覆盖本地未发布修改。",
+      "workbuddy": {
+        "asset": "novel-manju-chain-suite-0.3.3-workbuddy.zip",
+        "sha256": "010e4c4f9906713e1703dcecb74a1b0718b3458256c3e4c156fbcf4f894e4bb5",
+        "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3-workbuddy.zip"
+      }
+    },
+    {
       "version": "0.3.2",
       "published_at": "2026-09-07T16:17:08+08:00",
       "release_asset": "novel-manju-chain-suite-0.3.2.zip",
@@ -87,45 +131,6 @@
       "title": "Skill 内置维护发布入口与统一同步规则",
       "summary": "三个业务 Skill 与链式 Agent 内置维护说明：优化验证完成后询问是否同步 GitHub，获准后按统一记录发布并更新官网；普通创作不触发发布。",
       "compatibility": "更新后需重新加载宿主或开启新任务。创作正文和业务版本不变；发布需要维护仓库克隆与写权限，不自动部署本机全局规则，不进行每小时轮询。跨电脑宿主行为尚未实测。"
-    },
-    {
-      "version": "0.3.0",
-      "published_at": "2026-09-06T20:23:51+08:00",
-      "release_asset": "novel-manju-chain-suite-0.3.0.zip",
-      "release_sha256": "6d9d09e2648820da3a39f585892dea6a01ad738557324bbf6e3bc1edd28f4583",
-      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.0",
-      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/novel-manju-chain-suite-0.3.0.zip",
-      "component_assets": {
-        "short-drama-write": {
-          "release_asset": "short-drama-write-0.3.0.zip",
-          "release_sha256": "7a06cc6947d92eb67d446dd2928e94a3a9dda6b02e8c899f9a8db3cee2a4db7f",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/short-drama-write-0.3.0.zip",
-          "included_skills": [
-            "short-drama-write"
-          ]
-        },
-        "manju-director-v5-2": {
-          "release_asset": "manju-director-v5-2-0.3.0.zip",
-          "release_sha256": "acef0ba32aeba28746cbf346596725a2a84dce73c3b7dd61505e9fa9300c5020",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/manju-director-v5-2-0.3.0.zip",
-          "included_skills": [
-            "manju-director-v5-2"
-          ]
-        },
-        "manju-asset-image-pipeline": {
-          "release_asset": "manju-asset-image-pipeline-0.3.0.zip",
-          "release_sha256": "9a75b891583274ffb8c6f889764f516a04df7eb83538e6b8a1d5abc099d24ac1",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/manju-asset-image-pipeline-0.3.0.zip",
-          "included_skills": [
-            "manju-asset-image-pipeline",
-            "manju-character-card",
-            "manju-scene-grid"
-          ]
-        }
-      },
-      "title": "导演分镜素材引用与镜头导航格式统一",
-      "summary": "更新漫剧导演 Skill v5.2 的未绑定素材引用规范：参考素材改用简短稳定资产名，并固定镜号、标题、时长三段式镜头导航。",
-      "compatibility": "更新后需重新加载宿主或开启新任务。导演业务版本仍为 v5.2；未绑定参考素材不再输出管线字段，旧项目若继续生产应统一采用新的简短资产引用名，已绑定素材不应被误报为未绑定。"
     }
   ]
 }

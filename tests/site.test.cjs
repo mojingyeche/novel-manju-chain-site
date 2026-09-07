@@ -58,7 +58,7 @@ test('each guide filters unified history by exact component', async () => {
     history.releases[0].components.push({id:'unrelated', name:'UNRELATED_MARKER', summary:'not this skill'});
     const view = await renderGuide(id, {'update-history':history});
     assert.ok(!view.get('#guide-history').innerHTML.includes('UNRELATED_MARKER'));
-    const component = history.releases[0].components.find(c => c.id === id);
+    const component = history.releases.flatMap(release => release.components).find(c => c.id === id);
     assert.ok(view.get('#guide-history').innerHTML.includes(component.summary));
     const downloads = view.get('#guide-downloads').innerHTML;
     const displayed = load('versions').versions;
@@ -93,7 +93,7 @@ test('guide rejects unsafe links and escapes component text', async () => {
   const versions = load('versions');
   versions.versions[0].download_url = 'https://evil.example/download';
   const history = load('update-history');
-  history.releases[0].components.find(component => component.id === 'short-drama-write').summary = '<img src=x onerror=alert(1)>';
+  history.releases.flatMap(release => release.components).find(component => component.id === 'short-drama-write').summary = '<img src=x onerror=alert(1)>';
   const view = await renderGuide('short-drama-write', {versions, 'update-history':history});
   assert.match(view.get('#guide-downloads').textContent, /不可信/);
   assert.ok(!view.get('#guide-history').innerHTML.includes('<img'));
