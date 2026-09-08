@@ -1,41 +1,41 @@
 {
   "schema_version": 1,
-  "suite_version": "0.3.3",
-  "released_at": "2026-09-07T18:16:00+08:00",
-  "release_asset": "novel-manju-chain-suite-0.3.3.zip",
-  "release_sha256": "0614a090080701854a2ad2ff6a783407b6368d88d6f9ff6f1a77ed39d7033c27",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.3",
+  "suite_version": "0.3.4",
+  "released_at": "2026-09-08T21:57:00+08:00",
+  "release_asset": "novel-manju-chain-suite-0.3.4.zip",
+  "release_sha256": "949eab98afce1540ff4ad7b473a933e124878c0cefc244fa7aefd517db92721e",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.4",
   "minimum_installer_version": "0.1.0",
   "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-07T18:16:00+08:00",
-  "title": "导演多模态引用预算与双端同版本更新",
-  "summary": "合并已审查的导演五文件修改，增加参考素材分类计数、重复定义和超额检查；保持导演方案、剧情和跨技能授权边界。",
-  "compatibility": "Codex 与 WorkBuddy 共用0.3.3，导演业务版本仍为v5.2。旧项目不自动重写；未核实的入口总数限制不编造。原生17项检查器测试通过不代表真实出片效果或客户端重载已验证。升级保留可信旧包与备份，不覆盖本地未发布修改。",
+  "published_at": "2026-09-08T21:57:00+08:00",
+  "title": "导演画面表达、动作精度与连续性优化",
+  "summary": "同步已审阅的导演五文件更新，明确具体画面表达、按结果分配动作精度、信息触发表演及跨镜状态继承；新增九组人工文本回归用例。",
+  "compatibility": "Codex 与 WorkBuddy 共用0.3.4，导演业务版本仍为v5.2。原生阶段、固定格式、模板和检查脚本保持不变，不自动重写旧项目。17项原生测试与人工文本审阅不等于真实出片效果验证；既有检查器漏检边界仍需人工核对。升级须保留本地改动并重新加载宿主，不承诺热重载。",
   "components": [
     {
       "id": "manju-director-v5-2",
       "name": "漫剧导演 Skill v5.2",
       "change_type": "changed",
-      "summary": "图片、音频、视频分别计数，待绑定引用占槽；检查编号、重复定义、音频别名和超额。静默角色保留声音档案但不占本组音频槽；无损筛选仍超额时请求选择，不擅改导演锁、删对白或拆连续长镜。"
+      "summary": "画面描述明确主语、动作对象与结果；击开和接住区别处理，保留必要承托、伤势和复杂动作。反应有刺激与对象，允许合理重叠与停顿；核对景别时长、道具实体、动作进度和身份绑定证据，补充九组人工语义用例。"
     },
     {
       "id": "release-system",
       "name": "发行与安装系统",
       "change_type": "changed",
-      "summary": "审查并允许0.3.3 WorkBuddy构建，复用同版本发行与备份更新流程；更正本机案例入口安装状态的过时描述。保留历史版本及包哈希。"
+      "summary": "审查并允许0.3.4 WorkBuddy同版本构建；定向同步导演组件，保留其余业务源与历史包，更新统一下载目录和SHA256。"
     },
     {
       "id": "website",
       "name": "中文官网",
       "change_type": "changed",
-      "summary": "从统一更新记录刷新0.3.3说明、双宿主下载与SHA256，展示最近三个稳定版本。"
+      "summary": "从统一记录刷新0.3.4更新说明、双宿主下载、校验值及最近三个稳定版本展示。"
     }
   ],
-  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3.zip",
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/novel-manju-chain-suite-0.3.4.zip",
   "private_download": true,
   "workbuddy": {
-    "asset": "novel-manju-chain-suite-0.3.3-workbuddy.zip",
-    "sha256": "010e4c4f9906713e1703dcecb74a1b0718b3458256c3e4c156fbcf4f894e4bb5",
-    "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3-workbuddy.zip"
+    "asset": "novel-manju-chain-suite-0.3.4-workbuddy.zip",
+    "sha256": "c60808d201a1cd238b6aa003d1977ab82312ade7a658a6f920be98d1310c9a18",
+    "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/novel-manju-chain-suite-0.3.4-workbuddy.zip"
   }
 }
