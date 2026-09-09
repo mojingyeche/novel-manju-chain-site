@@ -7,10 +7,42 @@ const root = path.resolve(__dirname, '..');
 const load = name => JSON.parse(fs.readFileSync(path.join(root, 'data', name + '.json'), 'utf8'));
 
 const guides = ['agent', 'short-drama-write', 'manju-director-v5-2', 'manju-asset-image-pipeline'];
+test('host prompts preserve six IDs and separate installation methods', () => {
+  const context = {document: {body: {dataset: {}}, addEventListener() {}, querySelector: () => ({})}, URL, fetch: async () => ({ok: false, status: 503})};
+  vm.createContext(context);
+  vm.runInContext(fs.readFileSync(path.join(root, 'assets/guide.js'), 'utf8'), context);
+  context.record = load('versions').versions[0];
+  const codex = vm.runInContext('installPrompt(record, "Codex")', context);
+  const buddy = vm.runInContext('installPrompt(record, "WorkBuddy")', context);
+  for (const text of [codex, buddy]) {
+    for (const id of ['novel-manju-chain-agent','short-drama-write','manju-director-v5-2','manju-asset-image-pipeline','manju-character-card','manju-scene-grid']) assert.ok(text.includes(id));
+    assert.match(text, /保存位置和作用范围/);
+    assert.match(text, /安装完成后逐项报告/);
+    assert.match(text, /不覆盖未确认的差异/);
+  }
+  assert.ok(codex.includes(context.record.release_sha256));
+  assert.ok(buddy.includes(context.record.workbuddy.sha256));
+  assert.match(codex, /--codex-home/);
+  assert.match(buddy, /不要执行 provenance/);
+  assert.ok(!buddy.includes('--codex-home'));
+});
+
+test('each version has labeled accessible host panels with copyable prompts', async () => {
+  const view = await renderGuide('novel-manju-chain-agent');
+  const html = view.get('#guide-downloads').innerHTML;
+  for (let i = 0; i < load('versions').versions.length; i++) {
+    assert.ok(html.includes(`id="codex-tab-${i}"`));
+    assert.ok(html.includes(`id="workbuddy-panel-${i}" role="tabpanel" aria-labelledby="workbuddy-tab-${i}" hidden`));
+  }
+  assert.match(html, /复制 Codex 安装指令/);
+  assert.match(html, /复制 WorkBuddy 安装指令/);
+  assert.match(html, /复制六个调用示例/);
+});
 async function renderGuide(id, overrides = {}) {
   const elements = new Map();
   const document = {
     body: {dataset: {guide: id}},
+    addEventListener: () => {},
     querySelectorAll: () => [],
     querySelector: selector => {
       if (!elements.has(selector)) elements.set(selector, {textContent: '', innerHTML: ''});
@@ -72,7 +104,7 @@ test('each guide filters unified history by exact component', async () => {
 test('guide history failure preserves download list', async () => {
   const view = await renderGuide('short-drama-write', {'update-history':null});
   assert.match(view.get('#guide-history').textContent, /HTTP 503/);
-  assert.match(view.get('#guide-downloads').innerHTML, /下载完整套件/);
+  assert.match(view.get('#guide-downloads').innerHTML, /下载 Codex 完整套件/);
 });
 
 test('standalone packages expose own hashes and dependencies', async () => {
