@@ -177,8 +177,18 @@ test('published data agrees across all three manifests', () => {
     const note = history.find(note=>note.version===record.version);
     assert.ok(note);
     for (const key of ['published_at','title','summary','compatibility']) assert.equal(record[key], note[key]);
-    const base = 'https://github.com/mojingyeche/novel-manju-chain-suite/releases';
+    const base = `https://github.com/mojingyeche/${record.private_download ? 'novel-manju-chain-suite' : 'novel-manju-chain-site'}/releases`;
     assert.equal(record.release_url, `${base}/tag/${record.version}`);
     assert.equal(record.download_url, `${base}/download/${record.version}/novel-manju-chain-suite-${record.version}.zip`);
   }
+});
+
+test('latest button downloads public ZIP directly and older private packages are labeled', async () => {
+  const latest = load('latest');
+  assert.equal(latest.private_download, false);
+  const view = await render();
+  assert.equal(view.get('#release-link').href, latest.download_url);
+  assert.match(latest.download_url, /novel-manju-chain-site\/releases\/download\/[^/]+\/[^/]+\.zip$/);
+  assert.match(view.get('#version-downloads').innerHTML, /旧版私有存档/);
+  assert.match((await renderGuide('short-drama-write')).get('#guide-downloads').innerHTML, /无需 GitHub 账号/);
 });

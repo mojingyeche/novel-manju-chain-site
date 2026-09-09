@@ -1,4 +1,13 @@
 {
+  "distribution_events": [
+    {
+      "date": "2026-09-09",
+      "version": "0.3.4",
+      "components": ["release-system", "website"],
+      "summary": "经用户授权将0.3.4五个正式安装包原样镜像到公开官网仓库，保持原包SHA256；修正获取最新版为直达ZIP，未登录下载五包核验通过。源码仓库保持私有，未迁移旧版明确标记权限要求。",
+      "compatibility": "仅修改分发与官网，不修改Skill或安装包内容，不改变原发行时间。旧包内更新工具仍可能依赖私有仓库，必要时从官网手动下载。"
+    }
+  ],
   "schema_version": 1,
   "suite_name": "小说/漫剧链式 Agent",
   "timezone": "Asia/Shanghai",

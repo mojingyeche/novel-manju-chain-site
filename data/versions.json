@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "suite_name": "小说/漫剧链式 Agent",
-  "private_download": true,
+  "private_download": false,
   "display_limit": 3,
   "minimum_previous_releases": 3,
   "versions": [
@@ -10,13 +10,13 @@
       "published_at": "2026-09-08T21:57:00+08:00",
       "release_asset": "novel-manju-chain-suite-0.3.4.zip",
       "release_sha256": "949eab98afce1540ff4ad7b473a933e124878c0cefc244fa7aefd517db92721e",
-      "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.4",
-      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/novel-manju-chain-suite-0.3.4.zip",
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.4",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/novel-manju-chain-suite-0.3.4.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.4.zip",
           "release_sha256": "c7ad765fd8a2ede6db69631b9f0f7e31f01bb90c5cea576d536f096165f71ab4",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/short-drama-write-0.3.4.zip",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/short-drama-write-0.3.4.zip",
           "included_skills": [
             "short-drama-write"
           ]
@@ -24,7 +24,7 @@
         "manju-director-v5-2": {
           "release_asset": "manju-director-v5-2-0.3.4.zip",
           "release_sha256": "b8a067ea9d83c59af347273ab067f3508b18f256f3314c25a4174622e3491d84",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/manju-director-v5-2-0.3.4.zip",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/manju-director-v5-2-0.3.4.zip",
           "included_skills": [
             "manju-director-v5-2"
           ]
@@ -32,7 +32,7 @@
         "manju-asset-image-pipeline": {
           "release_asset": "manju-asset-image-pipeline-0.3.4.zip",
           "release_sha256": "b7fcd3d25ecd1b605536c10eda0ebe88cdb490d35d9af7c47947387cc7023021",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/manju-asset-image-pipeline-0.3.4.zip",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/manju-asset-image-pipeline-0.3.4.zip",
           "included_skills": [
             "manju-asset-image-pipeline",
             "manju-character-card",
@@ -46,8 +46,9 @@
       "workbuddy": {
         "asset": "novel-manju-chain-suite-0.3.4-workbuddy.zip",
         "sha256": "c60808d201a1cd238b6aa003d1977ab82312ade7a658a6f920be98d1310c9a18",
-        "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.4/novel-manju-chain-suite-0.3.4-workbuddy.zip"
-      }
+        "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/novel-manju-chain-suite-0.3.4-workbuddy.zip"
+      },
+      "private_download": false
     },
     {
       "version": "0.3.3",
@@ -91,7 +92,8 @@
         "asset": "novel-manju-chain-suite-0.3.3-workbuddy.zip",
         "sha256": "010e4c4f9906713e1703dcecb74a1b0718b3458256c3e4c156fbcf4f894e4bb5",
         "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3-workbuddy.zip"
-      }
+      },
+      "private_download": true
     },
     {
       "version": "0.3.2",
@@ -135,7 +137,8 @@
         "asset": "novel-manju-chain-suite-0.3.2-workbuddy.zip",
         "sha256": "32b76127aa7592751ea4bccc76052fb188ca87c6b347d52abe5ce8c8e0eb57e9",
         "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/novel-manju-chain-suite-0.3.2-workbuddy.zip"
-      }
+      },
+      "private_download": true
     }
   ]
 }

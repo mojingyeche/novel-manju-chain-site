@@ -64,12 +64,12 @@
     </section>
 
     <section id="install" class="section shell">
-      <div class="section-head"><span>03</span><div><h2>安装与更新</h2><p>代码与安装包保存在私有仓库；获授权的使用者需要登录 GitHub。</p></div></div>
+      <div class="section-head"><span>03</span><div><h2>安装与更新</h2><p>最新版安装包公开下载，无需 GitHub 账号；源码仓库继续私有。</p></div></div>
       <div class="grid two">
         <article class="install"><span>A</span><h3>交给 Agent 安装</h3><p>复制下面的安装指令，发给支持本地文件和 GitHub CLI 的智能体。它应先校验 SHA256，再备份并安装。</p><button data-copy="请从 mojingyeche/novel-manju-chain-suite 的最新 GitHub Release 下载小说/漫剧链式 Agent 安装包，核对官方网站公布的 SHA256，备份现有版本后安装。安装完成后告诉我备份路径，并提醒我重新加载或开启新任务。">复制安装提示</button></article>
         <article class="install"><span>B</span><h3>每次调用先检查新版</h3><p>Agent 启动时读取公开版本清单。有新版先展示统一更新说明并询问；确认后才安装，安装后停止旧版本流程并要求重新加载。</p><code>UPDATE_AVAILABLE → 用户确认 → 安装 → 重新加载</code></article>
       </div>
-      <p class="notice">私有下载说明：网站公开不等于安装包公开。未获得私有仓库访问权限时，可以阅读指南，但无法下载 Release。</p>
+      <p class="notice">下载说明：0.3.4 正式安装包已公开；旧版私有存档仍需仓库权限。下载后请核对对应版本的 SHA256。</p>
       <div class="version-archive">
         <div class="archive-head"><div><span>ROLLBACK</span><h3>最近 3 个稳定版本</h3></div><p>每个版本拥有独立安装包和校验值。回退前先备份本机改动，再按目标版本说明安装并重新加载。版本不足 3 个时展示全部已有版本。</p></div>
         <div id="version-downloads" class="version-downloads"><p>正在读取历史版本……</p></div>
@@ -83,7 +83,7 @@
 
     <section class="section shell boundary">
       <div class="section-head"><span>05</span><div><h2>能力边界</h2></div></div>
-      <p>网站不公开私有 Skill 正文、授权凭证或安装包。Agent 不会在剧本未冻结时进入资产与导演生产，也不会把未经验证的路径、哈希、资产或检查结果写成已经完成。</p>
+      <p>正式安装包经授权公开，包含 Skill 指令、模板与脚本；不公开源码仓库历史、未发布内容或授权凭证。Agent 不会在剧本未冻结时进入资产与导演生产，也不会把未经验证的路径、哈希、资产或检查结果写成已经完成。</p>
     </section>
   </main>
 
