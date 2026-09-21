@@ -215,12 +215,19 @@ test('published data agrees across all three manifests', () => {
   }
 });
 
-test('latest button downloads public ZIP directly and older private packages are labeled', async () => {
+test('latest button downloads public ZIP directly and private packages are labeled only when present', async () => {
   const latest = load('latest');
+  const versions = load('versions').versions;
   assert.equal(latest.private_download, false);
   const view = await render();
   assert.equal(view.get('#release-link').href, latest.download_url);
   assert.match(latest.download_url, /novel-manju-chain-site\/releases\/download\/[^/]+\/[^/]+\.zip$/);
-  assert.match(view.get('#version-downloads').innerHTML, /旧版私有存档/);
+  const versionHtml = view.get('#version-downloads').innerHTML;
+  assert.match(versionHtml, /公开下载：无需 GitHub 账号或登录/);
+  if (versions.some(record => record.private_download)) {
+    assert.match(versionHtml, /旧版私有存档/);
+  } else {
+    assert.doesNotMatch(versionHtml, /旧版私有存档/);
+  }
   assert.match((await renderGuide('short-drama-write')).get('#guide-downloads').innerHTML, /无需 GitHub 账号/);
 });
