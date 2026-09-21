@@ -13,6 +13,33 @@
   "timezone": "Asia/Shanghai",
   "releases": [
     {
+      "version": "0.3.7",
+      "published_at": "2026-09-21T23:42:44+08:00",
+      "title": "漫剧导演v3.7正式版：分型导演知识库、双模型契约与全局进化闭环",
+      "summary": "将已验证的0.3.7-rc.5落实为漫剧导演v3.7正式版，完整纳入仿真人、3D漫、2D动画、题材任务和资产风格路由，建立Seedance 2.0/2.5独立提示词契约、导演资料调用工作台、剧本清本门禁、全链路Better-Me及复杂动作执行内核；修正入口版本、中文映射和默认启动说明。",
+      "compatibility": "发行组件ID与包内目录继续保留manju-director-v5-2以兼容旧安装器，正式显示名与调用名改为漫剧导演v3.7/$manju-director-v3-7。旧项目不自动改写；Seedance 2.0与2.5继续按项目锁定的独立契约执行，升级后须重新加载宿主。71项原生测试和结构校验通过，不等于所有题材、生成模型或宿主界面均已完成真实出片验证。",
+      "components": [
+        {
+          "id": "manju-director-v5-2",
+          "name": "漫剧导演v3.7",
+          "change_type": "changed",
+          "summary": "新增仿真人、3D漫、2D动画、资产风格及题材任务分型知识库和项目路由；吸收导演卡、摄影方法、动作调度、声音设计与资产生产的可调用方法，保留来源证据及能力成熟度账本。Seedance 2.5支持4至30秒CONCISE/KSR_DETAILED双模式与四维对白标签，Seedance 2.0保持4至15秒、资产引用前置和总秒数契约。加入剧本确认后的可选清本门禁、下游主版本绑定、六阶段Better-Me和复杂动作执行内核；正式入口统一为0.3.7。"
+        },
+        {
+          "id": "release-system",
+          "name": "发行与安装系统",
+          "change_type": "changed",
+          "summary": "登记显示名升级为漫剧导演v3.7，保留兼容组件ID；审查并允许0.3.7 WorkBuddy确定性构建，继续要求Codex、WorkBuddy与官网下载包同版本、同源并完成SHA256核验。"
+        },
+        {
+          "id": "website",
+          "name": "中文官网",
+          "change_type": "changed",
+          "summary": "从统一更新记录刷新0.3.7版本说明、Codex与WorkBuddy下载链接及SHA256，并继续展示最近三个稳定版本。"
+        }
+      ]
+    },
+    {
       "version": "0.3.5",
       "published_at": "2026-09-19T00:32:21+08:00",
       "title": "导演整库经验、可拍画面门禁与三端同步闭环",
