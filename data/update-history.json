@@ -13,6 +13,33 @@
   "timezone": "Asia/Shanghai",
   "releases": [
     {
+      "version": "0.3.8",
+      "published_at": "2026-09-22T00:55:58+08:00",
+      "title": "资产定点生成、精确提示词追溯与公开更新源修复",
+      "summary": "为漫剧资产总控增加单资产定点生成、已批准资产编辑、用户提示词直生和旧提示词恢复重生四种受控模式，建立候选资产、发布审批、哈希锁与操作记录闭环；补齐新旧项目记录兼容和只读场景检查器。同时修复WorkBuddy自动更新发现器仍指向私有发行仓库的问题，消费端统一从公开下载仓库检查和获取正式包。",
+      "compatibility": "完整项目主流程、原目录结构与资产编号命名规则不变；旧版prompt字段继续兼容，新版final_compiled_prompt会校验prompt_sha256。没有发布路径或文件哈希证据的旧记录不会猜测恢复原提示词，而是明确返回未找到或仅允许重建建议。定点操作检查器只读且不能替代用户发布批准、视觉审图或真实生图验证；本次完成19个记录与文件事务场景、项目检查器自测及双宿主发行测试，未进行付费模型生图。旧项目不自动迁移，升级后须重新加载宿主。",
+      "components": [
+        {
+          "id": "manju-asset-image-pipeline",
+          "name": "漫剧资产总控 Agent",
+          "change_type": "changed",
+          "summary": "新增FULL_PROJECT之外的四种定点操作模式、候选资产隔离、正式资产哈希锁、明确发布决策与事务清单；可按资产编号、规范化正式路径和当前文件SHA精确追溯旧生成记录及原始/最终提示词。新增只读操作检查器与9项场景测试，提示词追溯器扩展至10项场景；项目检查器同时接受旧prompt和新版final_compiled_prompt记录，并验证新版提示词哈希。"
+        },
+        {
+          "id": "release-system",
+          "name": "发行与安装系统",
+          "change_type": "changed",
+          "summary": "WorkBuddy消费端把最新版检查与包下载源改为公开novel-manju-chain-site Release，源码溯源仍保留私有novel-manju-chain-suite；增加来源分离测试并登记0.3.8为已审查构建基线。"
+        },
+        {
+          "id": "website",
+          "name": "中文官网",
+          "change_type": "changed",
+          "summary": "从统一更新记录发布0.3.8说明、Codex与WorkBuddy下载链接及SHA256，公开下载仓库与官网保持同一版本。"
+        }
+      ]
+    },
+    {
       "version": "0.3.7",
       "published_at": "2026-09-21T23:42:44+08:00",
       "title": "漫剧导演v3.7正式版：分型导演知识库、双模型契约与全局进化闭环",

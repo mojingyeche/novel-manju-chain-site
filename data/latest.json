@@ -1,41 +1,41 @@
 {
   "schema_version": 1,
-  "suite_version": "0.3.7",
-  "released_at": "2026-09-21T23:42:44+08:00",
-  "release_asset": "novel-manju-chain-suite-0.3.7.zip",
-  "release_sha256": "9b82d0754d3c50ca6a215a7bb80c376ef0a8506202593d3392cc3e08f2635c30",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.7",
+  "suite_version": "0.3.8",
+  "released_at": "2026-09-22T00:55:58+08:00",
+  "release_asset": "novel-manju-chain-suite-0.3.8.zip",
+  "release_sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da",
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.8",
   "minimum_installer_version": "0.1.0",
   "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-21T23:42:44+08:00",
-  "title": "漫剧导演v3.7正式版：分型导演知识库、双模型契约与全局进化闭环",
-  "summary": "将已验证的0.3.7-rc.5落实为漫剧导演v3.7正式版，完整纳入仿真人、3D漫、2D动画、题材任务和资产风格路由，建立Seedance 2.0/2.5独立提示词契约、导演资料调用工作台、剧本清本门禁、全链路Better-Me及复杂动作执行内核；修正入口版本、中文映射和默认启动说明。",
-  "compatibility": "发行组件ID与包内目录继续保留manju-director-v5-2以兼容旧安装器，正式显示名与调用名改为漫剧导演v3.7/$manju-director-v3-7。旧项目不自动改写；Seedance 2.0与2.5继续按项目锁定的独立契约执行，升级后须重新加载宿主。71项原生测试和结构校验通过，不等于所有题材、生成模型或宿主界面均已完成真实出片验证。",
+  "published_at": "2026-09-22T00:55:58+08:00",
+  "title": "资产定点生成、精确提示词追溯与公开更新源修复",
+  "summary": "为漫剧资产总控增加单资产定点生成、已批准资产编辑、用户提示词直生和旧提示词恢复重生四种受控模式，建立候选资产、发布审批、哈希锁与操作记录闭环；补齐新旧项目记录兼容和只读场景检查器。同时修复WorkBuddy自动更新发现器仍指向私有发行仓库的问题，消费端统一从公开下载仓库检查和获取正式包。",
+  "compatibility": "完整项目主流程、原目录结构与资产编号命名规则不变；旧版prompt字段继续兼容，新版final_compiled_prompt会校验prompt_sha256。没有发布路径或文件哈希证据的旧记录不会猜测恢复原提示词，而是明确返回未找到或仅允许重建建议。定点操作检查器只读且不能替代用户发布批准、视觉审图或真实生图验证；本次完成19个记录与文件事务场景、项目检查器自测及双宿主发行测试，未进行付费模型生图。旧项目不自动迁移，升级后须重新加载宿主。",
   "components": [
     {
-      "id": "manju-director-v5-2",
-      "name": "漫剧导演v3.7",
+      "id": "manju-asset-image-pipeline",
+      "name": "漫剧资产总控 Agent",
       "change_type": "changed",
-      "summary": "新增仿真人、3D漫、2D动画、资产风格及题材任务分型知识库和项目路由；吸收导演卡、摄影方法、动作调度、声音设计与资产生产的可调用方法，保留来源证据及能力成熟度账本。Seedance 2.5支持4至30秒CONCISE/KSR_DETAILED双模式与四维对白标签，Seedance 2.0保持4至15秒、资产引用前置和总秒数契约。加入剧本确认后的可选清本门禁、下游主版本绑定、六阶段Better-Me和复杂动作执行内核；正式入口统一为0.3.7。"
+      "summary": "新增FULL_PROJECT之外的四种定点操作模式、候选资产隔离、正式资产哈希锁、明确发布决策与事务清单；可按资产编号、规范化正式路径和当前文件SHA精确追溯旧生成记录及原始/最终提示词。新增只读操作检查器与9项场景测试，提示词追溯器扩展至10项场景；项目检查器同时接受旧prompt和新版final_compiled_prompt记录，并验证新版提示词哈希。"
     },
     {
       "id": "release-system",
       "name": "发行与安装系统",
       "change_type": "changed",
-      "summary": "登记显示名升级为漫剧导演v3.7，保留兼容组件ID；审查并允许0.3.7 WorkBuddy确定性构建，继续要求Codex、WorkBuddy与官网下载包同版本、同源并完成SHA256核验。"
+      "summary": "WorkBuddy消费端把最新版检查与包下载源改为公开novel-manju-chain-site Release，源码溯源仍保留私有novel-manju-chain-suite；增加来源分离测试并登记0.3.8为已审查构建基线。"
     },
     {
       "id": "website",
       "name": "中文官网",
       "change_type": "changed",
-      "summary": "从统一更新记录刷新0.3.7版本说明、Codex与WorkBuddy下载链接及SHA256，并继续展示最近三个稳定版本。"
+      "summary": "从统一更新记录发布0.3.8说明、Codex与WorkBuddy下载链接及SHA256，公开下载仓库与官网保持同一版本。"
     }
   ],
-  "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.7/novel-manju-chain-suite-0.3.7.zip",
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/novel-manju-chain-suite-0.3.8.zip",
   "private_download": false,
   "workbuddy": {
-    "asset": "novel-manju-chain-suite-0.3.7-workbuddy.zip",
-    "sha256": "1a28961ae9a89a0c543997393edc6b81198fb5addd7b1ab0f1bb3b06693427be",
-    "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.7/novel-manju-chain-suite-0.3.7-workbuddy.zip"
+    "asset": "novel-manju-chain-suite-0.3.8-workbuddy.zip",
+    "sha256": "07d5a4e1540dc45722606be6b7248e88b5ccfb5e410a18f421cc01dc5ccf0e7c",
+    "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/novel-manju-chain-suite-0.3.8-workbuddy.zip"
   }
 }
