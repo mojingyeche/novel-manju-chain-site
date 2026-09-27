@@ -1,6 +1,13 @@
 {
   "distribution_events": [
     {
+      "date": "2026-09-28",
+      "version": "0.3.8",
+      "components": ["release-system", "website"],
+      "summary": "按用户明确授权，下架私有发行与公开下载仓库中全部已核实含旧导演的40个ZIP附件；其他独立包、发行记录与Git历史保留。旧导演官网使用入口退役，新工作流页面明确标记迁移未完成。附件清单见withdrawals.json。",
+      "compatibility": "这是跨历史版本的分发撤回事件，不重建旧包、不伪造新版本。旧套件和旧WorkBuddy整包不再可下载；旧链式流程的导演依赖不再可用。新工作流双端发行仍待完成，不代表客户端已重载。"
+    },
+    {
       "date": "2026-09-09",
       "version": "0.3.4",
       "components": ["release-system", "website"],
