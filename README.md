@@ -10,7 +10,7 @@
 
 - `guides/agent/`：Agent 完整手册，包含小说/剧本入口、审查、定向修订、冻结、资产、分镜、续作及更新回退。
 - `guides/short-drama-write/`：剧本 Skill 独立指南。
-- `guides/manju-director-v5-2/`：导演 Skill 独立指南。
+- `guides/manju-creation-director/`：漫剧创作工作流迁移状态。
 - `guides/manju-asset-image-pipeline/`：资产总控独立指南。
 
 每页都有能力、安装、机制、可复制用法、边界、下载和组件历史。`assets/guide.js` 按组件 ID 从统一历史筛选，不另维护 Skill 版本记录。下载列表来自 `data/versions.json`；0.2.0 起提供三个独立包，0.1.0 仍只提供原套件。完整校验目录 `data/downloads.json` 支持指定历史版本更新，不限制到网页展示的最近三版。

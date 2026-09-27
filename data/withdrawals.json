@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "event": "director-retirement-20260928",
+  "authorized_on": "2026-09-28",
+  "reason": "Retire old director only; preserve other skills and Git history.",
+  "assets": [
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393138952,
+      "tag": "0.3.8",
+      "id": 579471576,
+      "name": "manju-director-v5-2-0.3.8.zip",
+      "sha256": "893760f4e0d98a9ca781e9b2b772f34163959ab59cda285081f99902d0bdadc2"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393138952,
+      "tag": "0.3.8",
+      "id": 579471581,
+      "name": "novel-manju-chain-suite-0.3.8-workbuddy.zip",
+      "sha256": "07d5a4e1540dc45722606be6b7248e88b5ccfb5e410a18f421cc01dc5ccf0e7c"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393138952,
+      "tag": "0.3.8",
+      "id": 579471587,
+      "name": "novel-manju-chain-suite-0.3.8.zip",
+      "sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393137830,
+      "tag": "0.3.8",
+      "id": 579468196,
+      "name": "manju-director-v5-2-0.3.8.zip",
+      "sha256": "893760f4e0d98a9ca781e9b2b772f34163959ab59cda285081f99902d0bdadc2"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393137830,
+      "tag": "0.3.8",
+      "id": 579468191,
+      "name": "novel-manju-chain-suite-0.3.8-workbuddy.zip",
+      "sha256": "07d5a4e1540dc45722606be6b7248e88b5ccfb5e410a18f421cc01dc5ccf0e7c"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393137830,
+      "tag": "0.3.8",
+      "id": 579468197,
+      "name": "novel-manju-chain-suite-0.3.8.zip",
+      "sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393091889,
+      "tag": "0.3.7",
+      "id": 579346808,
+      "name": "manju-director-v5-2-0.3.7.zip",
+      "sha256": "8f2d6cf5e113515d9efd9f4b17f4321bd7f7b17d0c3016c882018d17a4da081b"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393091889,
+      "tag": "0.3.7",
+      "id": 579346805,
+      "name": "novel-manju-chain-suite-0.3.7-workbuddy.zip",
+      "sha256": "1a28961ae9a89a0c543997393edc6b81198fb5addd7b1ab0f1bb3b06693427be"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 393091889,
+      "tag": "0.3.7",
+      "id": 579346810,
+      "name": "novel-manju-chain-suite-0.3.7.zip",
+      "sha256": "9b82d0754d3c50ca6a215a7bb80c376ef0a8506202593d3392cc3e08f2635c30"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 391630036,
+      "tag": "0.3.5",
+      "id": 573025939,
+      "name": "manju-director-v5-2-0.3.5.zip",
+      "sha256": "66b036074dfb1abf40d2506b2462ef76a5e2f8742a865110756de7fa69db751f"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 391630036,
+      "tag": "0.3.5",
+      "id": 573025931,
+      "name": "novel-manju-chain-suite-0.3.5-workbuddy.zip",
+      "sha256": "b12f24c3f7556b98d25c800d6ee2779152f91f00e246141bdcb52e242284a98b"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 391630036,
+      "tag": "0.3.5",
+      "id": 573025934,
+      "name": "novel-manju-chain-suite-0.3.5.zip",
+      "sha256": "96befb42262b76c8e1fadc13c8c64665520d9158334546c8c5a7353c2c0bc7d1"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384780147,
+      "tag": "0.3.4",
+      "id": 550613935,
+      "name": "manju-director-v5-2-0.3.4.zip",
+      "sha256": "b8a067ea9d83c59af347273ab067f3508b18f256f3314c25a4174622e3491d84"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384780147,
+      "tag": "0.3.4",
+      "id": 550613933,
+      "name": "novel-manju-chain-suite-0.3.4-workbuddy.zip",
+      "sha256": "c60808d201a1cd238b6aa003d1977ab82312ade7a658a6f920be98d1310c9a18"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384780147,
+      "tag": "0.3.4",
+      "id": 550613938,
+      "name": "novel-manju-chain-suite-0.3.4.zip",
+      "sha256": "949eab98afce1540ff4ad7b473a933e124878c0cefc244fa7aefd517db92721e"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384009810,
+      "tag": "0.3.3",
+      "id": 548617512,
+      "name": "manju-director-v5-2-0.3.3.zip",
+      "sha256": "5a2f5df2704961fa701b4697e9cb15ba0f1549dd222eec509449a04c8d0b4bd4"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384009810,
+      "tag": "0.3.3",
+      "id": 548617514,
+      "name": "novel-manju-chain-suite-0.3.3-workbuddy.zip",
+      "sha256": "010e4c4f9906713e1703dcecb74a1b0718b3458256c3e4c156fbcf4f894e4bb5"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 384009810,
+      "tag": "0.3.3",
+      "id": 548617510,
+      "name": "novel-manju-chain-suite-0.3.3.zip",
+      "sha256": "0614a090080701854a2ad2ff6a783407b6368d88d6f9ff6f1a77ed39d7033c27"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383936323,
+      "tag": "0.3.2",
+      "id": 548449004,
+      "name": "manju-director-v5-2-0.3.2.zip",
+      "sha256": "15d9ac0d861674f89791eaebcf681bd1e1d0a70715d269228de3ff0ec51e7c1e"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383936323,
+      "tag": "0.3.2",
+      "id": 548449006,
+      "name": "novel-manju-chain-suite-0.3.2-workbuddy.zip",
+      "sha256": "32b76127aa7592751ea4bccc76052fb188ca87c6b347d52abe5ce8c8e0eb57e9"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383936323,
+      "tag": "0.3.2",
+      "id": 548449003,
+      "name": "novel-manju-chain-suite-0.3.2.zip",
+      "sha256": "06839b0a6674a44988de1dadb6fafd85f25c0ca7794688dfdacf3b229414db6c"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383582467,
+      "tag": "0.3.1",
+      "id": 547188849,
+      "name": "manju-director-v5-2-0.3.1.zip",
+      "sha256": "ca946517a15b06a19444aeb9f6c7cf19f6c4965a2c2c175125245a4770928610"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383582467,
+      "tag": "0.3.1",
+      "id": 547188846,
+      "name": "novel-manju-chain-suite-0.3.1.zip",
+      "sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383575818,
+      "tag": "0.3.0",
+      "id": 547169598,
+      "name": "manju-director-v5-2-0.3.0.zip",
+      "sha256": "acef0ba32aeba28746cbf346596725a2a84dce73c3b7dd61505e9fa9300c5020"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383575818,
+      "tag": "0.3.0",
+      "id": 547169595,
+      "name": "novel-manju-chain-suite-0.3.0.zip",
+      "sha256": "6d9d09e2648820da3a39f585892dea6a01ad738557324bbf6e3bc1edd28f4583"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383492058,
+      "tag": "0.2.0",
+      "id": 546847791,
+      "name": "manju-director-v5-2-0.2.0.zip",
+      "sha256": "866b2246a0b367b1b26251cbf1badfd646d63668de4211380ff2432cb4b87d64"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383492058,
+      "tag": "0.2.0",
+      "id": 546847788,
+      "name": "novel-manju-chain-suite-0.2.0.zip",
+      "sha256": "1ae0e30335c0b020288684a3bea04bf1ec8d4175e6db6d6ac14a5d4f2549e631"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-suite",
+      "release_id": 383473134,
+      "tag": "0.1.0",
+      "id": 546765611,
+      "name": "novel-manju-chain-suite-0.1.0.zip",
+      "sha256": "8770fc4666bcebbe6e15cc636640d5f66edc939750c3b7c6d3d9d97f7c0cc87b"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393138920,
+      "tag": "0.3.8",
+      "id": 579471488,
+      "name": "manju-director-v5-2-0.3.8.zip",
+      "sha256": "893760f4e0d98a9ca781e9b2b772f34163959ab59cda285081f99902d0bdadc2"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393138920,
+      "tag": "0.3.8",
+      "id": 579471478,
+      "name": "novel-manju-chain-suite-0.3.8-workbuddy.zip",
+      "sha256": "07d5a4e1540dc45722606be6b7248e88b5ccfb5e410a18f421cc01dc5ccf0e7c"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393138920,
+      "tag": "0.3.8",
+      "id": 579471492,
+      "name": "novel-manju-chain-suite-0.3.8.zip",
+      "sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393093439,
+      "tag": "0.3.7",
+      "id": 579350707,
+      "name": "manju-director-v5-2-0.3.7.zip",
+      "sha256": "8f2d6cf5e113515d9efd9f4b17f4321bd7f7b17d0c3016c882018d17a4da081b"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393093439,
+      "tag": "0.3.7",
+      "id": 579350699,
+      "name": "novel-manju-chain-suite-0.3.7-workbuddy.zip",
+      "sha256": "1a28961ae9a89a0c543997393edc6b81198fb5addd7b1ab0f1bb3b06693427be"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 393093439,
+      "tag": "0.3.7",
+      "id": 579350702,
+      "name": "novel-manju-chain-suite-0.3.7.zip",
+      "sha256": "9b82d0754d3c50ca6a215a7bb80c376ef0a8506202593d3392cc3e08f2635c30"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 391631634,
+      "tag": "0.3.5",
+      "id": 573031703,
+      "name": "manju-director-v5-2-0.3.5.zip",
+      "sha256": "66b036074dfb1abf40d2506b2462ef76a5e2f8742a865110756de7fa69db751f"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 391631634,
+      "tag": "0.3.5",
+      "id": 573031701,
+      "name": "novel-manju-chain-suite-0.3.5-workbuddy.zip",
+      "sha256": "b12f24c3f7556b98d25c800d6ee2779152f91f00e246141bdcb52e242284a98b"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 391631634,
+      "tag": "0.3.5",
+      "id": 573031698,
+      "name": "novel-manju-chain-suite-0.3.5.zip",
+      "sha256": "96befb42262b76c8e1fadc13c8c64665520d9158334546c8c5a7353c2c0bc7d1"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 385296923,
+      "tag": "0.3.4",
+      "id": 552222875,
+      "name": "manju-director-v5-2-0.3.4.zip",
+      "sha256": "b8a067ea9d83c59af347273ab067f3508b18f256f3314c25a4174622e3491d84"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 385296923,
+      "tag": "0.3.4",
+      "id": 552222871,
+      "name": "novel-manju-chain-suite-0.3.4-workbuddy.zip",
+      "sha256": "c60808d201a1cd238b6aa003d1977ab82312ade7a658a6f920be98d1310c9a18"
+    },
+    {
+      "repo": "mojingyeche/novel-manju-chain-site",
+      "release_id": 385296923,
+      "tag": "0.3.4",
+      "id": 552222869,
+      "name": "novel-manju-chain-suite-0.3.4.zip",
+      "sha256": "949eab98afce1540ff4ad7b473a933e124878c0cefc244fa7aefd517db92721e"
+    }
+  ]
+}

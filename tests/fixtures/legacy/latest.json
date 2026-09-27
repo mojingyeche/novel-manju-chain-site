@@ -31,7 +31,11 @@
       "summary": "从统一更新记录发布0.3.8说明、Codex与WorkBuddy下载链接及SHA256，公开下载仓库与官网保持同一版本。"
     }
   ],
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/novel-manju-chain-suite-0.3.8.zip",
   "private_download": false,
-  "withdrawn": true,
-  "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+  "workbuddy": {
+    "asset": "novel-manju-chain-suite-0.3.8-workbuddy.zip",
+    "sha256": "07d5a4e1540dc45722606be6b7248e88b5ccfb5e410a18f421cc01dc5ccf0e7c",
+    "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/novel-manju-chain-suite-0.3.8-workbuddy.zip"
+  }
 }

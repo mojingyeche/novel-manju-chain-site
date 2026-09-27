@@ -4,9 +4,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
-const load = name => JSON.parse(fs.readFileSync(path.join(root, 'data', name + '.json'), 'utf8'));
+// Retain regression coverage for historical rendering using immutable fixtures.
+// Live withdrawal data is covered separately by retirement.test.cjs.
+const load = name => JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/legacy', name + '.json'), 'utf8'));
 
-const guides = ['agent', 'short-drama-write', 'manju-director-v5-2', 'manju-asset-image-pipeline'];
+const guides = ['agent', 'short-drama-write', 'manju-asset-image-pipeline'];
 test('host prompts preserve six IDs and separate installation methods', () => {
   const context = {document: {body: {dataset: {}}, addEventListener() {}, querySelector: () => ({})}, URL, fetch: async () => ({ok: false, status: 503})};
   vm.createContext(context);
@@ -15,7 +17,7 @@ test('host prompts preserve six IDs and separate installation methods', () => {
   const codex = vm.runInContext('installPrompt(record, "Codex")', context);
   const buddy = vm.runInContext('installPrompt(record, "WorkBuddy")', context);
   for (const text of [codex, buddy]) {
-    for (const id of ['novel-manju-chain-agent','short-drama-write','manju-director-v5-2','manju-asset-image-pipeline','manju-character-card','manju-scene-grid']) assert.ok(text.includes(id));
+    for (const id of ['novel-manju-chain-agent','short-drama-write','manju-asset-image-pipeline','manju-character-card','manju-scene-grid']) assert.ok(text.includes(id));
     assert.match(text, /保存位置和作用范围/);
     assert.match(text, /安装完成后逐项报告/);
     assert.match(text, /不覆盖未确认的差异/);

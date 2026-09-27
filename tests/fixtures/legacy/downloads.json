@@ -7,6 +7,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.8.zip",
       "release_sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.8",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/novel-manju-chain-suite-0.3.8.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.8.zip",
@@ -14,6 +15,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/short-drama-write-0.3.8.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.8.zip",
+          "release_sha256": "893760f4e0d98a9ca781e9b2b772f34163959ab59cda285081f99902d0bdadc2",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.8/manju-director-v5-2-0.3.8.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -27,9 +36,7 @@
           ]
         }
       },
-      "private_download": false,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": false
     },
     {
       "version": "0.3.7",
@@ -37,6 +44,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.7.zip",
       "release_sha256": "9b82d0754d3c50ca6a215a7bb80c376ef0a8506202593d3392cc3e08f2635c30",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.7",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.7/novel-manju-chain-suite-0.3.7.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.7.zip",
@@ -44,6 +52,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.7/short-drama-write-0.3.7.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.7.zip",
+          "release_sha256": "8f2d6cf5e113515d9efd9f4b17f4321bd7f7b17d0c3016c882018d17a4da081b",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.7/manju-director-v5-2-0.3.7.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -57,9 +73,7 @@
           ]
         }
       },
-      "private_download": false,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": false
     },
     {
       "version": "0.3.5",
@@ -67,6 +81,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.5.zip",
       "release_sha256": "96befb42262b76c8e1fadc13c8c64665520d9158334546c8c5a7353c2c0bc7d1",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.5",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.5/novel-manju-chain-suite-0.3.5.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.5.zip",
@@ -74,6 +89,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.5/short-drama-write-0.3.5.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.5.zip",
+          "release_sha256": "66b036074dfb1abf40d2506b2462ef76a5e2f8742a865110756de7fa69db751f",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.5/manju-director-v5-2-0.3.5.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -87,9 +110,7 @@
           ]
         }
       },
-      "private_download": false,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": false
     },
     {
       "version": "0.3.4",
@@ -97,6 +118,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.4.zip",
       "release_sha256": "949eab98afce1540ff4ad7b473a933e124878c0cefc244fa7aefd517db92721e",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.4",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/novel-manju-chain-suite-0.3.4.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.4.zip",
@@ -104,6 +126,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/short-drama-write-0.3.4.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.4.zip",
+          "release_sha256": "b8a067ea9d83c59af347273ab067f3508b18f256f3314c25a4174622e3491d84",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.4/manju-director-v5-2-0.3.4.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -117,9 +147,7 @@
           ]
         }
       },
-      "private_download": false,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": false
     },
     {
       "version": "0.3.3",
@@ -127,6 +155,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.3.zip",
       "release_sha256": "0614a090080701854a2ad2ff6a783407b6368d88d6f9ff6f1a77ed39d7033c27",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.3",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/novel-manju-chain-suite-0.3.3.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.3.zip",
@@ -134,6 +163,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/short-drama-write-0.3.3.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.3.zip",
+          "release_sha256": "5a2f5df2704961fa701b4697e9cb15ba0f1549dd222eec509449a04c8d0b4bd4",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.3/manju-director-v5-2-0.3.3.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -147,9 +184,7 @@
           ]
         }
       },
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": true
     },
     {
       "version": "0.3.2",
@@ -157,6 +192,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.2.zip",
       "release_sha256": "06839b0a6674a44988de1dadb6fafd85f25c0ca7794688dfdacf3b229414db6c",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.2",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/novel-manju-chain-suite-0.3.2.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.2.zip",
@@ -164,6 +200,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/short-drama-write-0.3.2.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.2.zip",
+          "release_sha256": "15d9ac0d861674f89791eaebcf681bd1e1d0a70715d269228de3ff0ec51e7c1e",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.2/manju-director-v5-2-0.3.2.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -177,9 +221,7 @@
           ]
         }
       },
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": true
     },
     {
       "version": "0.3.1",
@@ -187,6 +229,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.1.zip",
       "release_sha256": "99d50dd3ca0f3de0b087c3ae89cc62b94b6ebaea4d9b3d79ee5ff723c8fbf0d4",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.1",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/novel-manju-chain-suite-0.3.1.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.1.zip",
@@ -194,6 +237,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/short-drama-write-0.3.1.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.1.zip",
+          "release_sha256": "ca946517a15b06a19444aeb9f6c7cf19f6c4965a2c2c175125245a4770928610",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.1/manju-director-v5-2-0.3.1.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -207,9 +258,7 @@
           ]
         }
       },
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": true
     },
     {
       "version": "0.3.0",
@@ -217,6 +266,7 @@
       "release_asset": "novel-manju-chain-suite-0.3.0.zip",
       "release_sha256": "6d9d09e2648820da3a39f585892dea6a01ad738557324bbf6e3bc1edd28f4583",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.3.0",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/novel-manju-chain-suite-0.3.0.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.3.0.zip",
@@ -224,6 +274,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/short-drama-write-0.3.0.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.3.0.zip",
+          "release_sha256": "acef0ba32aeba28746cbf346596725a2a84dce73c3b7dd61505e9fa9300c5020",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.3.0/manju-director-v5-2-0.3.0.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -237,9 +295,7 @@
           ]
         }
       },
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": true
     },
     {
       "version": "0.2.0",
@@ -247,6 +303,7 @@
       "release_asset": "novel-manju-chain-suite-0.2.0.zip",
       "release_sha256": "1ae0e30335c0b020288684a3bea04bf1ec8d4175e6db6d6ac14a5d4f2549e631",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.2.0",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.2.0/novel-manju-chain-suite-0.2.0.zip",
       "component_assets": {
         "short-drama-write": {
           "release_asset": "short-drama-write-0.2.0.zip",
@@ -254,6 +311,14 @@
           "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.2.0/short-drama-write-0.2.0.zip",
           "included_skills": [
             "short-drama-write"
+          ]
+        },
+        "manju-director-v5-2": {
+          "release_asset": "manju-director-v5-2-0.2.0.zip",
+          "release_sha256": "866b2246a0b367b1b26251cbf1badfd646d63668de4211380ff2432cb4b87d64",
+          "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.2.0/manju-director-v5-2-0.2.0.zip",
+          "included_skills": [
+            "manju-director-v5-2"
           ]
         },
         "manju-asset-image-pipeline": {
@@ -267,9 +332,7 @@
           ]
         }
       },
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "private_download": true
     },
     {
       "version": "0.1.0",
@@ -277,9 +340,8 @@
       "release_asset": "novel-manju-chain-suite-0.1.0.zip",
       "release_sha256": "8770fc4666bcebbe6e15cc636640d5f66edc939750c3b7c6d3d9d97f7c0cc87b",
       "release_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/tag/0.1.0",
-      "private_download": true,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-suite/releases/download/0.1.0/novel-manju-chain-suite-0.1.0.zip",
+      "private_download": true
     }
   ]
 }

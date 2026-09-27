@@ -45,10 +45,10 @@
       <p><a href="guides/agent/">小说/漫剧链式 Agent 完整指南 →</a>：小说改编、只审不改、按编号修订、冻结、资产、分镜、中断续作与更新回退。</p>
       <div class="grid three">
         <article><b>文本</b><h3><a href="guides/short-drama-write/">drama 漫剧剧本创作</a></h3><p>short-drama-write：完整剧本、定向修订与保留原文的格式整理，不是 drama-creator。</p></article>
-        <article><b>导演</b><h3><a href="guides/manju-director-v5-2/">漫剧导演 Skill v5.2</a></h3><p>从确定剧本到连续性分镜与视频提示词，区分未绑定文本版和真实资产绑定版。</p></article>
+        <article><b>工作流</b><h3><a href="guides/manju-creation-director/">漫剧创作工作流</a></h3><p>原创、改编、审查、资产、分镜和提示词的统一入口。双端与官网迁移中，尚未发布新版安装包。</p></article>
         <article><b>资产</b><h3><a href="guides/manju-asset-image-pipeline/">漫剧资产总控</a></h3><p>从剧情证据与状态链，到视觉方案、试生、生成与验收；说明辅助依赖与迁移限制。</p></article>
       </div>
-      <p class="notice">从 0.2.0 起提供完整套件与三个独立 Skill 包。每个 Skill 页面有使用说明、独立下载、校验值和本组件历史；资产总控包附带人物及场景两个辅助技能。</p>
+      <p class="notice">含退役组件的历史套件、WorkBuddy 包与该组件独立包已停止分发。写作和资产独立包继续保留；资产包附带人物及场景辅助技能。</p>
     </section>
 
     <section id="workflow" class="section shell">
@@ -66,10 +66,10 @@
     <section id="install" class="section shell">
       <div class="section-head"><span>03</span><div><h2>安装与更新</h2><p>最新版安装包公开下载，无需 GitHub 账号；源码仓库继续私有。</p></div></div>
       <div class="grid two">
-        <article class="install"><span>A</span><h3>交给 Agent 安装</h3><p>复制下面的安装指令，发给支持本地文件和 GitHub CLI 的智能体。它应先校验 SHA256，再备份并安装。</p><button data-copy="请从 mojingyeche/novel-manju-chain-site 的最新公开 GitHub Release 下载小说/漫剧链式 Agent 安装包，核对官方网站公布的 SHA256，备份现有版本后安装。安装完成后告诉我备份路径，并提醒我重新加载或开启新任务。">复制安装提示</button></article>
+        <article class="install"><span>A</span><h3>迁移期间的安装</h3><p>旧套件已停止分发，请勿沿用旧套件安装指令。下方仅提供仍可用的写作与资产独立包。漫剧创作工作流完成验证及发布后才提供双端安装包。</p></article>
         <article class="install"><span>B</span><h3>每次调用先检查新版</h3><p>Agent 启动时读取公开版本清单。有新版先展示统一更新说明并询问；确认后才安装，安装后停止旧版本流程并要求重新加载。</p><code>UPDATE_AVAILABLE → 用户确认 → 安装 → 重新加载</code></article>
       </div>
-      <p class="notice">下载说明：0.3.8 正式安装包已公开，自动更新与手动下载均使用公开发行仓库；旧版私有存档仍需仓库权限。下载后请核对对应版本的 SHA256。</p>
+      <p class="notice">2026-09-28 退役迁移：含旧导演的所有历史下载包停止分发，不修改旧包或伪造新版本。Git 历史保留；下方独立包请核对 SHA256。</p>
       <div class="version-archive">
         <div class="archive-head"><div><span>ROLLBACK</span><h3>最近 3 个稳定版本</h3></div><p>每个版本拥有独立安装包和校验值。回退前先备份本机改动，再按目标版本说明安装并重新加载。版本不足 3 个时展示全部已有版本。</p></div>
         <div id="version-downloads" class="version-downloads"><p>正在读取历史版本……</p></div>

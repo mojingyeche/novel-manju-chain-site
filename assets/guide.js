@@ -14,12 +14,12 @@ async function readGuideData(name) {
 const skillNames = [
   ['novel-manju-chain-agent', '小说漫剧链式助手'],
   ['short-drama-write', '短剧剧本创作'],
-  ['manju-director-v5-2', '漫剧导演分镜'],
   ['manju-asset-image-pipeline', '漫剧资产总控'],
   ['manju-character-card', '漫剧人物卡'],
   ['manju-scene-grid', '漫剧场景九宫格']
 ];
 function installPrompt(v, host) {
+  if (v.withdrawn) throw new Error('该套件已下架，不得继续安装');
   const wb = host === 'WorkBuddy';
   const url = wb ? v.workbuddy.download_url : v.download_url;
   trustedRelease(url);
@@ -50,6 +50,10 @@ function hostPanel(v, host, index) {
   </div>`;
 }
 function versionCard(v, index) {
+  if (v.withdrawn) {
+    const asset = v.component_assets?.[guideId];
+    return `<article class="package-card"><h3>v${escapeText(v.version)} · 套件已下架</h3><p>旧套件及 WorkBuddy 包已停止分发；不得使用旧安装指令。新工作流尚未正式发布。</p>${asset ? `<p><a class="package-download" href="${trustedRelease(asset.download_url)}">下载不含退役组件的独立包</a></p><p>${escapeText(asset.release_asset)}</p><p>包含：${escapeText(asset.included_skills.join('、'))}</p><p class="hash">SHA256：${escapeText(asset.release_sha256)}</p>` : '<p>此入口暂无可用安装包。</p>'}</article>`;
+  }
   return `<article class="package-card"><div class="package-version"><span class="version-badge">${index ? '历史版本' : '当前稳定版'}</span><h3>v${escapeText(v.version)}</h3></div><p class="meta">${escapeText(v.published_at)} · ${escapeText(v.title)}</p><p class="package-access">${v.private_download ? '旧版私有存档：需仓库权限并登录 GitHub；建议使用当前公开稳定版。' : '公开下载 · 无需 GitHub 账号或登录'}</p><div class="host-tabs" role="tablist" aria-label="选择 ${escapeText(v.version)} 安装平台">${['Codex','WorkBuddy'].map((host, i) => { const key = host.toLowerCase(); return `<button type="button" role="tab" id="${key}-tab-${index}" aria-controls="${key}-panel-${index}" aria-selected="${!i}" tabindex="${i ? '-1' : '0'}" data-host-tab>${host} 版</button>`; }).join('')}</div>${hostPanel(v, 'Codex', index)}${hostPanel(v, 'WorkBuddy', index)}<details class="compatibility"><summary>版本兼容说明</summary><p>${escapeText(v.compatibility)}</p></details></article>`;
 }
 readGuideData('versions').then(data => {
