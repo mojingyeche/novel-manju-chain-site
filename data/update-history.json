@@ -2,6 +2,16 @@
   "distribution_events": [
     {
       "date": "2026-09-28",
+      "version": "0.4.0",
+      "components": [
+        "release-system",
+        "website"
+      ],
+      "summary": "单入口发行后续迁移：本机Codex与WorkBuddy文件已安装并逐项核验；旧六组件、专用Agent与插件入口退出活动扫描范围，套件外路由保留自身规则并改为显式交接。旧官网指南改为退役提示，不再提供旧组件安装或执行指令。",
+      "compatibility": "本事件不改写0.4.0发布时记录，不重建或覆盖安装包。旧项目不静默迁移，旧short-drama事务和owner契约不冒充新工作流兼容；客户端实际加载与双端文本冒烟仍须单独验收。"
+    },
+    {
+      "date": "2026-09-28",
       "version": "0.3.8",
       "components": [
         "release-system",
