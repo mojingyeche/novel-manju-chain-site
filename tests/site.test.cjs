@@ -69,9 +69,14 @@ test('all guides have complete sections and resolvable local links', () => {
     const file = path.join(root, relative);
     const html = fs.readFileSync(file, 'utf8');
     assert.ok(!html.includes('锟斤拷') && !html.includes('????'));
-    if (relative !== 'index.html') {
+    if (relative === 'guides/manju-creation-director/index.html') {
       for (const id of ['capabilities','install','workflow','examples','boundaries','download','history']) assert.ok(html.includes(`id="${id}"`), `${relative}: ${id}`);
       assert.ok(html.includes('data-copy='));
+    }
+    if (guides.some(id => relative === `guides/${id}/index.html`)) {
+      assert.match(html, /旧入口已退役/);
+      assert.ok(html.includes('../manju-creation-director/'));
+      assert.doesNotMatch(html, /data-copy=|guide\.js|releases\/download|\$short-drama-write|\$novel-manju-chain-agent/);
     }
     for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
       const href = match[1];
