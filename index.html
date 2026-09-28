@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="小说/漫剧链式 Agent 官方中文指南：小说转剧本、剧本审查、资产统筹与导演分镜。">
-  <title>小说/漫剧链式 Agent｜官方中文指南</title>
+  <meta name="description" content="漫剧创作工作流官方中文指南：原创与改编、剧本审查、资产、分镜与提示词；Codex 和 WorkBuddy 同版本分发。">
+  <title>漫剧创作工作流｜官方中文指南</title>
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/versions.css">
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top"><span class="mark">链</span><span>小说/漫剧链式 Agent</span></a>
-    <nav><a href="guides/agent/">完整指南</a><a href="#library">Skill 目录</a><a href="#install">安装</a><a href="#updates">更新记录</a></nav>
+    <a class="brand" href="#top"><span class="mark">漫</span><span>漫剧创作工作流</span></a>
+    <nav><a href="guides/manju-creation-director/">使用指南</a><a href="#library">统一入口</a><a href="#install">安装</a><a href="#updates">更新记录</a></nav>
   </header>
 
   <main id="top">
     <section class="hero shell">
       <div class="eyebrow">NOVEL → SCRIPT → ASSETS → STORYBOARD</div>
-      <h1>从小说或剧本出发，<br><em>沿一条可确认、可追溯的链路</em>走到漫剧分镜。</h1>
-      <p class="lead">小说只多一步“转完整剧本”；之后统一进入剧本审查、确认修订、冻结、资产统筹和导演分镜。每个关键阶段都有明确门槛。</p>
+      <h1>从灵感、小说或剧本出发，<br><em>在同一份项目事实之上</em>完成创作与制作。</h1>
+      <p class="lead">原创、改编、审查、优化、可选清本、资产、分镜与提示词。按你指定的阶段执行，保留人物语气、动作连续性和版本证据，不自动越级生产。</p>
       <div class="actions">
-        <button class="primary" data-copy="调用小说/漫剧链式 Agent，先检查 GitHub Release 更新，再根据我提供的小说或剧本进入对应流程。">复制调用指令</button>
-        <a class="secondary" href="guides/agent/">查看完整使用指南</a>
+        <button class="primary" data-copy="使用 manju-creation-director（漫剧创作工作流），先读取真实 SKILL.md 并核对版本，再按我指定的阶段处理。">复制调用指令</button>
+        <a class="secondary" href="guides/manju-creation-director/">查看使用指南</a>
       </div>
       <div class="release-card">
         <div><span class="label">最新版本</span><strong id="latest-version">读取中</strong></div>
@@ -34,31 +34,31 @@
     <section id="features" class="section shell">
       <div class="section-head"><span>01</span><div><h2>它能帮你做什么</h2><p>不是一次性黑箱生成，而是把改编与制作拆成能检查、能确认的阶段。</p></div></div>
       <div class="grid three">
-        <article><b>小说改编</b><h3>小说先成为完整剧本</h3><p>先确认时长、风格、平台和改编边界，再按漫剧节奏完成剧本，不额外绕行小说重写版。</p></article>
+        <article><b>原创与改编</b><h3>从灵感到剧本</h3><p>按本轮范围完成设定、人物、大纲或正文；已有选择先核对，不机械重复提问。</p></article>
         <article><b>剧本修订</b><h3>问题清单先于改写</h3><p>检查对白 AI 化、因果、人设、重复、格式、开篇和节奏；只有用户确认的问题才进入修订。</p></article>
-        <article><b>制作交付</b><h3>冻结后再做资产与分镜</h3><p>资产状态链与导演规划基于同一份冻结剧本，最终提示词绑定真实资产，不把占位符冒充成品。</p></article>
+        <article><b>制作交付</b><h3>资产、分镜与提示词分层</h3><p>绑定确认的主剧本及批准项，分别处理导演设计和模型格式；文本交付不自动调用媒体模型。</p></article>
       </div>
     </section>
 
     <section id="library" class="section shell library">
-      <div class="section-head"><span>指南</span><div><h2>Agent 与独立 Skill 手册</h2><p>每个入口都有独立页面：介绍、安装、功能用法、下载、更新说明和历史记录。</p></div></div>
-      <p><a href="guides/agent/">小说/漫剧链式 Agent 完整指南 →</a>：小说改编、只审不改、按编号修订、冻结、资产、分镜、中断续作与更新回退。</p>
+      <div class="section-head"><span>指南</span><div><h2>一个入口，按阶段工作</h2><p>manju-creation-director 是新版发行的唯一创作入口；下面是能力模块，不是三个独立技能。</p></div></div>
+      <p><a href="guides/manju-creation-director/">漫剧创作工作流使用指南 →</a>：调用、阶段边界、版本检查、双端安装与恢复。</p>
       <div class="grid three">
-        <article><b>文本</b><h3><a href="guides/short-drama-write/">drama 漫剧剧本创作</a></h3><p>short-drama-write：完整剧本、定向修订与保留原文的格式整理，不是 drama-creator。</p></article>
-        <article><b>工作流</b><h3><a href="guides/manju-creation-director/">漫剧创作工作流</a></h3><p>原创、改编、审查、资产、分镜和提示词的统一入口。双端与官网迁移中，尚未发布新版安装包。</p></article>
-        <article><b>资产</b><h3><a href="guides/manju-asset-image-pipeline/">漫剧资产总控</a></h3><p>从剧情证据与状态链，到视觉方案、试生、生成与验收；说明辅助依赖与迁移限制。</p></article>
+        <article><b>文本</b><h3>写作与审查</h3><p>原创、改编、只审不改、定向优化、格式保真与可选清本。</p></article>
+        <article><b>资产</b><h3>规划与生成</h3><p>按证据与状态设计人物、场景和道具；提示词与真实生图分别授权。</p></article>
+        <article><b>导演</b><h3>分镜与提示词</h3><p>分镜可独立交付；Seedance 2.0、2.5 分别编译和核验。</p></article>
       </div>
-      <p class="notice">含退役组件的历史套件、WorkBuddy 包与该组件独立包已停止分发。写作和资产独立包继续保留；资产包附带人物及场景辅助技能。</p>
+      <p class="notice">旧下载记录仅供历史查询，不是新版的安装依赖。含退役导演的历史包已停止分发，不会随新版更新恢复上架。</p>
     </section>
 
     <section id="workflow" class="section shell">
-      <div class="section-head"><span>02</span><div><h2>统一工作流</h2><p>小说入口与剧本入口最终汇合到同一条生产主链。</p></div></div>
+      <div class="section-head"><span>02</span><div><h2>按目标选择阶段</h2><p>可执行单个环节；下面不是要求每次跑完的强制长链。</p></div></div>
       <ol class="timeline">
         <li><i>1</i><div><h3>识别输入与目标</h3><p>小说或剧本、目标时长、风格、受众平台、不可改内容。</p></div></li>
-        <li><i>2</i><div><h3>小说转完整剧本</h3><p>仅小说输入执行；完成后与已有剧本进入相同路径。</p></div></li>
+        <li><i>2</i><div><h3>原创或小说改编</h3><p>按本轮授权交付设定、大纲或剧本，不自动清本。</p></div></li>
         <li><i>3</i><div><h3>只审查，不暗改</h3><p>给出位置证据、影响、严重程度和优化方案，等待用户确认。</p></div></li>
-        <li><i>4</i><div><h3>定向修订与冻结</h3><p>只改获准项目；全量复核后由用户确认冻结版本与哈希。</p></div></li>
-        <li><i>5</i><div><h3>资产统筹与导演规划</h3><p>从冻结剧本建立资产证据、状态链、视觉方向、调度和镜头设计。</p></div></li>
+        <li><i>4</i><div><h3>定向修订与主稿确认</h3><p>保留保护项、四维语气与变更记录；主版本由用户确认，不按修改时间猜测。</p></div></li>
+        <li><i>5</i><div><h3>资产统筹与导演规划</h3><p>从确认主稿建立资产证据、状态链、视觉方向、调度和镜头设计。</p></div></li>
         <li><i>6</i><div><h3>绑定资产的最终分镜</h3><p>检查人物动作、空间、对白对象、口型与跨镜承接后交付。</p></div></li>
       </ol>
     </section>
@@ -66,8 +66,8 @@
     <section id="install" class="section shell">
       <div class="section-head"><span>03</span><div><h2>安装与更新</h2><p>最新版安装包公开下载，无需 GitHub 账号；源码仓库继续私有。</p></div></div>
       <div class="grid two">
-        <article class="install"><span>A</span><h3>迁移期间的安装</h3><p>旧套件已停止分发，请勿沿用旧套件安装指令。下方仅提供仍可用的写作与资产独立包。漫剧创作工作流完成验证及发布后才提供双端安装包。</p></article>
-        <article class="install"><span>B</span><h3>每次调用先检查新版</h3><p>Agent 启动时读取公开版本清单。有新版先展示统一更新说明并询问；确认后才安装，安装后停止旧版本流程并要求重新加载。</p><code>UPDATE_AVAILABLE → 用户确认 → 安装 → 重新加载</code></article>
+        <article class="install"><span>A</span><h3>双端同版本安装</h3><p>仅安装下方已发布的工作流包；先核对哈希、备份及本地差异，再选择 Codex 或 WorkBuddy 的技能目录。若仍显示迁移中，新包尚不可用。</p></article>
+        <article class="install"><span>B</span><h3>按需检查更新</h3><p>安装维护工具读取公开版本清单，不后台轮询或自动覆盖。发现新版后查看说明，经确认再安装，并新开聊天核验加载版本。</p><code>检查 → 查看差异 → 用户确认 → 安装 → 验证加载</code></article>
       </div>
       <p class="notice">2026-09-28 退役迁移：含旧导演的所有历史下载包停止分发，不修改旧包或伪造新版本。Git 历史保留；下方独立包请核对 SHA256。</p>
       <div class="version-archive">
@@ -83,11 +83,11 @@
 
     <section class="section shell boundary">
       <div class="section-head"><span>05</span><div><h2>能力边界</h2></div></div>
-      <p>正式安装包经授权公开，包含 Skill 指令、模板与脚本；不公开源码仓库历史、未发布内容或授权凭证。Agent 不会在剧本未冻结时进入资产与导演生产，也不会把未经验证的路径、哈希、资产或检查结果写成已经完成。</p>
+      <p>正式安装包经授权公开，包含 Skill 指令、模板与脚本；不公开源码仓库历史、未发布内容或授权凭证。发行版本不替代业务与知识版本；安装成功不代表旧聊天已加载新版，机械检查也不等于创作效果验证。</p>
     </section>
   </main>
 
-  <footer><div class="shell"><strong>小说/漫剧链式 Agent</strong><span>官方中文指南 · 更新数据与 GitHub Release 同源</span></div></footer>
+  <footer><div class="shell"><strong>漫剧创作工作流</strong><span>官方中文指南 · 更新数据与 GitHub Release 同源</span></div></footer>
   <div id="toast" role="status">已复制</div>
   <script src="assets/site.js"></script>
 </body>

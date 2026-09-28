@@ -64,7 +64,7 @@ async function renderGuide(id, overrides = {}) {
 }
 
 test('all guides have complete sections and resolvable local links', () => {
-  const files = ['index.html', ...guides.map(id => `guides/${id}/index.html`)];
+  const files = ['index.html', ...[...guides, 'manju-creation-director'].map(id => `guides/${id}/index.html`)];
   for (const relative of files) {
     const file = path.join(root, relative);
     const html = fs.readFileSync(file, 'utf8');

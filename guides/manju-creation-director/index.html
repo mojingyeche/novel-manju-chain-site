@@ -1,3 +1,23 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>漫剧创作工作流｜迁移状态</title><link rel="stylesheet" href="../../assets/site.css"></head>
-<body><main class="shell"><p><a href="../../">返回官网</a></p><h1>漫剧创作工作流</h1><p>入口：<code>manju-creation-director</code>。</p><p>覆盖原创与小说改编、剧本审查优化、可选清本、资产、导演分镜及视频提示词。按用户指定阶段执行，不自动生图、生成视频或发布。</p><h2>迁移状态</h2><p>正在接入 Codex、WorkBuddy 同版本安装与官网更新机制。新工作流公开安装包尚未发布，本页不提供未经核验的下载链接，也不表示客户端已加载新版。</p><h2>已安装用户如何调用</h2><pre>使用 manju-creation-director，先读取真实 SKILL.md，核对当前版本，再按我指定的阶段处理。</pre><p>找不到真实入口时应报告未安装，不改用其他 Skill。旧项目保留原文件和版本绑定，不自动迁移。</p></main></body></html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>漫剧创作工作流｜使用与安装</title><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/guide.css"></head>
+<body data-guide="manju-creation-director"><main class="shell">
+<p><a href="../../">返回官网</a></p><h1>漫剧创作工作流</h1>
+<p>唯一入口：<code>manju-creation-director</code>。发行版本、业务版本与知识版本分别记录；正式分发不表示所有题材或媒体模型都已生产验证。</p>
+<h2 id="capabilities">功能与边界</h2>
+<p>覆盖原创与小说改编、剧本审查优化、可选清本、资产、导演分镜及视频提示词。按用户指定阶段执行，不自动生图、生成视频或发布。读取被动资料不等于调用其他技能。</p>
+<h2 id="examples">如何调用</h2>
+<pre>使用 manju-creation-director（漫剧创作工作流），先读取真实 SKILL.md，核对当前版本，再按我指定的阶段处理。</pre>
+<button data-copy="使用 manju-creation-director（漫剧创作工作流），先读取真实 SKILL.md，核对当前版本，再按我指定的阶段处理。">复制调用指令</button>
+<p>例如：只做十集大纲；只审查这份剧本，不改稿；按已确认问题优化对白；只规划资产，不生图。找不到真实入口时报告未安装，不改用旧技能。</p>
+<h2 id="workflow">阶段与旧项目</h2>
+<p>以用户确认主稿为准，核对路径、版本及哈希，再读取当前阶段必要规则。旧项目保留原文件和绑定；接续时先列迁移映射、保护项和缺失证据，经项目迁移确认后再写新状态。</p>
+<h2 id="install">双端安装与更新</h2>
+<p>下方下载列表来自已验证发行清单。Codex 与 WorkBuddy 包采用相同业务文件，不为宿主改写创作规则。若只出现撤回的历史版本，新工作流尚未提供可用公开包。</p>
+<p>先核对包哈希、真实安装目录及本地差异。包内安装器负责暂存、计划校验、安装和恢复；旧组件退役及外部依赖须单独核查，不自动清理无关技能。安装回执与客户端加载分别验收。</p>
+<p>按需运行包内 <code>python workflow_distribution.py check --installed-version &lt;已安装发行号&gt;</code> 查看公开清单。检查不自动安装、不后台轮询；更新须确认，安装后新开聊天核验。</p>
+<h2 id="boundaries">恢复与验证</h2>
+<p>备份放在技能扫描目录外。中断后保留事务和锁，核对日志后使用 <code>recover --transaction &lt;事务目录&gt; --confirmed</code>。恢复拒绝覆盖后续本地修改。已公开包不覆盖；发布缺陷通过新修订版纠正。文件一致不等于客户端已加载或创作效果已验证。</p>
+<h2 id="download">已发布下载</h2><div id="guide-downloads">正在读取发行清单……</div>
+<h2 id="history">统一更新记录</h2><div id="guide-history">正在读取更新记录……</div>
+</main><div id="toast" role="status"></div><script src="../../assets/guide.js"></script></body></html>

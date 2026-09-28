@@ -13,6 +13,15 @@ async function readData(name) {
 function failure(selector, error) {
   document.querySelector(selector).textContent = `数据暂时无法读取：${error.message}。请刷新重试。`;
 }
+function workflowCard(release, index) {
+  const labels = {suite:'套件更新包', skill:'独立 Skill 包', workbuddy:'WorkBuddy 包'};
+  if (!release.assets || Object.keys(release.assets).length === 0) throw new Error('发行清单缺少安装包');
+  const links = Object.entries(release.assets).map(([role, asset])=>{
+    if (!/^[0-9a-f]{64}$/i.test(asset.sha256)) throw new Error('安装包校验值无效');
+    return `<p><a class="download-button" href="${releaseURL(asset.url)}">${escapeHTML(labels[role] || role)}</a></p><code>${escapeHTML(asset.name)} · SHA256 ${escapeHTML(asset.sha256)}</code>`;
+  }).join('');
+  return `<article class="version-card"><div class="version-title"><div><span>${index===0?'当前发行版':'历史发行版'}</span><h4>v${escapeHTML(release.version)}</h4></div><time>${formatTime(release.published_at)}</time></div><p>${escapeHTML(release.title)} · ${escapeHTML(release.summary)}</p><p>统一入口：manju-creation-director。双端业务文件一致；安装后需重新加载并验证。</p>${links}<p><a href="${releaseURL(release.release_url)}">查看更新说明</a></p></article>`;
+}
 
 document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
   try { await navigator.clipboard.writeText(button.dataset.copy); document.querySelector('#toast').textContent='已复制'; }
@@ -35,7 +44,7 @@ readData('latest').then(latest=>{
   document.querySelector('#release-link').href=releaseURL(latest.download_url);
 }).catch(error=>failure('#latest-version', error));
 readData('versions').then(versions=>{
-  document.querySelector('#version-downloads').innerHTML=versions.versions.map((release,index)=>release.withdrawn ? `<article class="version-card"><h4>v${escapeHTML(release.version)} · 套件已下架</h4><p>包含退役组件的套件与 WorkBuddy 包停止分发。以下独立包不含退役组件，继续保留。</p>${Object.values(release.component_assets || {}).map(asset=>`<p><a class="download-button" href="${releaseURL(asset.download_url)}">${escapeHTML(asset.release_asset)}</a></p><code>SHA256 ${escapeHTML(asset.release_sha256)}</code>`).join('')}</article>` : `<article class="version-card">
+  document.querySelector('#version-downloads').innerHTML=versions.versions.map((release,index)=>release.distribution_schema === 'MCD-DISTRIBUTION-1' ? workflowCard(release,index) : release.withdrawn ? `<article class="version-card"><h4>v${escapeHTML(release.version)} · 套件已下架</h4><p>包含退役组件的套件与 WorkBuddy 包停止分发。以下为仍保留的历史独立包，不属于新版工作流安装入口。</p>${Object.values(release.component_assets || {}).map(asset=>`<p><a class="download-button" href="${releaseURL(asset.download_url)}">${escapeHTML(asset.release_asset)}</a></p><code>SHA256 ${escapeHTML(asset.release_sha256)}</code>`).join('')}</article>` : `<article class="version-card">
     <div class="version-title"><div><span>${index===0?'当前稳定版':'历史稳定版'}</span><h4>v${escapeHTML(release.version)}</h4></div><time>${formatTime(release.published_at)}</time></div>
     <p>${escapeHTML(release.title)} · ${escapeHTML(release.summary)}</p>
     <p>${release.private_download ? '旧版私有存档：需仓库权限并登录 GitHub' : '公开下载：无需 GitHub 账号或登录'}</p>

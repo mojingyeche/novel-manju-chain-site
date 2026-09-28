@@ -1,10 +1,65 @@
 {
-  "schema_version": 1,
-  "suite_name": "小说/漫剧链式 Agent",
-  "private_download": false,
-  "display_limit": 3,
-  "minimum_previous_releases": 3,
+  "schema_version": 2,
   "versions": [
+    {
+      "version": "0.4.0",
+      "published_at": "2026-09-28T15:29:04+08:00",
+      "title": "漫剧创作工作流单入口发行与双端维护",
+      "summary": "发行入口改为 manju-creation-director，保留其既有业务规则、格式与知识版本。新增按清单构建的三类同内容安装包、可恢复安装器、只读更新检测、分阶段发布校验及官网清单生成，沿用原私有仓库、公开下载仓库和官网。",
+      "compatibility": "破坏性入口迁移：新版不再发行旧六组件或 Agent。旧含导演附件保持下架。业务版本仍为0.1.0-rc.2及既有本地修订，不把发行号当作创作能力全面验证。旧项目不静默迁移；安装器只安装新组件，旧入口退役和套件外路由需独立核查与备份。当前本机外部路由迁移尚未全部完成，文件安装与客户端实际加载分别验收，不承诺旧聊天热重载。",
+      "components": [
+        {
+          "id": "manju-creation-director",
+          "name": "漫剧创作工作流",
+          "change_type": "added",
+          "summary": "作为唯一发行业务组件加入原发行体系，保留创作正文、模板和知识卡版本；增加维护发现及双端官网更新说明，移除发布者个人路径和用户指定的自有批注。"
+        },
+        {
+          "id": "release-system",
+          "name": "发行与安装系统",
+          "change_type": "changed",
+          "summary": "由版本清单决定组件和包集合；提供逐文件哈希、安装计划、冲突拒绝、事务恢复和公开更新检测。私有草稿回验后正式发布，再公开并匿名下载核验；禁用旧标签自动构建，不覆盖历史包。34项本地发行相关测试通过，网络发布及各宿主实际状态以独立回执为准。"
+        },
+        {
+          "id": "website",
+          "name": "中文官网",
+          "change_type": "changed",
+          "summary": "改为漫剧创作工作流介绍和单入口安装说明，新版下载由同一发行清单生成，历史版本保留各自清单与撤回状态。19项本地网站测试通过，不再要求新版不存在的六组件下载。"
+        }
+      ],
+      "schema_version": 2,
+      "suite_version": "0.4.0",
+      "suite_name": "漫剧创作工作流",
+      "release_asset": "novel-manju-chain-suite-0.4.0.zip",
+      "release_sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+      "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/novel-manju-chain-suite-0.4.0.zip",
+      "private_download": false,
+      "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.4.0",
+      "distribution_schema": "MCD-DISTRIBUTION-1",
+      "assets": {
+        "suite": {
+          "name": "novel-manju-chain-suite-0.4.0.zip",
+          "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+          "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/novel-manju-chain-suite-0.4.0.zip"
+        },
+        "skill": {
+          "name": "manju-creation-director-0.4.0.zip",
+          "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+          "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/manju-creation-director-0.4.0.zip"
+        },
+        "workbuddy": {
+          "name": "manju-creation-director-0.4.0-workbuddy.zip",
+          "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+          "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/manju-creation-director-0.4.0-workbuddy.zip"
+        }
+      },
+      "business_versions": {
+        "manju-creation-director": "0.1.0-rc.2"
+      },
+      "knowledge_version": {
+        "manju-creation-director": "sha256:b5d769f1b65ee424634420c42c3e80eb9548c2bb9ac7e5892fe719e63632c405"
+      }
+    },
     {
       "version": "0.3.8",
       "published_at": "2026-09-22T00:55:58+08:00",
@@ -67,39 +122,6 @@
       "title": "漫剧导演v3.7正式版：分型导演知识库、双模型契约与全局进化闭环",
       "summary": "将已验证的0.3.7-rc.5落实为漫剧导演v3.7正式版，完整纳入仿真人、3D漫、2D动画、题材任务和资产风格路由，建立Seedance 2.0/2.5独立提示词契约、导演资料调用工作台、剧本清本门禁、全链路Better-Me及复杂动作执行内核；修正入口版本、中文映射和默认启动说明。",
       "compatibility": "发行组件ID与包内目录继续保留manju-director-v5-2以兼容旧安装器，正式显示名与调用名改为漫剧导演v3.7/$manju-director-v3-7。旧项目不自动改写；Seedance 2.0与2.5继续按项目锁定的独立契约执行，升级后须重新加载宿主。71项原生测试和结构校验通过，不等于所有题材、生成模型或宿主界面均已完成真实出片验证。",
-      "private_download": false,
-      "withdrawn": true,
-      "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
-    },
-    {
-      "version": "0.3.5",
-      "published_at": "2026-09-19T00:32:21+08:00",
-      "release_asset": "novel-manju-chain-suite-0.3.5.zip",
-      "release_sha256": "96befb42262b76c8e1fadc13c8c64665520d9158334546c8c5a7353c2c0bc7d1",
-      "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.5",
-      "component_assets": {
-        "short-drama-write": {
-          "release_asset": "short-drama-write-0.3.5.zip",
-          "release_sha256": "f762c1ed4d21eb481c04e52ac058b25a3946ac141197ad46fbaa4b72c7a8403b",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.5/short-drama-write-0.3.5.zip",
-          "included_skills": [
-            "short-drama-write"
-          ]
-        },
-        "manju-asset-image-pipeline": {
-          "release_asset": "manju-asset-image-pipeline-0.3.5.zip",
-          "release_sha256": "a1b99563ca1ab2782f0708420f80c6a1cb193e9eeb41974084db745e213ff2e7",
-          "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.3.5/manju-asset-image-pipeline-0.3.5.zip",
-          "included_skills": [
-            "manju-asset-image-pipeline",
-            "manju-character-card",
-            "manju-scene-grid"
-          ]
-        }
-      },
-      "title": "导演整库经验、可拍画面门禁与三端同步闭环",
-      "summary": "合并《双穿厨神》77集、429镜实战后的全部累计差异：纳入导演资料整库、可拍画面与机位预算检查器、长篇分批与旧稿迁移规范、R15-R28回归经验及发声者降级SOP，并把Codex、WorkBuddy和官网包的同版本更新列为正式发布完成条件。",
-      "compatibility": "Codex 与 WorkBuddy 共用0.3.5，导演业务版本仍为v5.2；不自动改写旧项目。新增资料整库会增大安装包体积。21项原生检查器测试通过，且规则来自77集429镜项目验证，但不等于所有题材或宿主热重载均已验证；升级后须重新加载宿主。",
       "private_download": false,
       "withdrawn": true,
       "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"

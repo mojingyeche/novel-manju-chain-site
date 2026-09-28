@@ -1,37 +1,59 @@
 {
-  "schema_version": 1,
-  "suite_version": "0.3.8",
-  "released_at": "2026-09-22T00:55:58+08:00",
-  "release_asset": "novel-manju-chain-suite-0.3.8.zip",
-  "release_sha256": "145d1b1e926e0bef6fe8a9a6d788cc5062f17c3311cffe10c36c93ff1faa34da",
-  "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.3.8",
-  "minimum_installer_version": "0.1.0",
-  "suite_name": "小说/漫剧链式 Agent",
-  "published_at": "2026-09-22T00:55:58+08:00",
-  "title": "资产定点生成、精确提示词追溯与公开更新源修复",
-  "summary": "为漫剧资产总控增加单资产定点生成、已批准资产编辑、用户提示词直生和旧提示词恢复重生四种受控模式，建立候选资产、发布审批、哈希锁与操作记录闭环；补齐新旧项目记录兼容和只读场景检查器。同时修复WorkBuddy自动更新发现器仍指向私有发行仓库的问题，消费端统一从公开下载仓库检查和获取正式包。",
-  "compatibility": "完整项目主流程、原目录结构与资产编号命名规则不变；旧版prompt字段继续兼容，新版final_compiled_prompt会校验prompt_sha256。没有发布路径或文件哈希证据的旧记录不会猜测恢复原提示词，而是明确返回未找到或仅允许重建建议。定点操作检查器只读且不能替代用户发布批准、视觉审图或真实生图验证；本次完成19个记录与文件事务场景、项目检查器自测及双宿主发行测试，未进行付费模型生图。旧项目不自动迁移，升级后须重新加载宿主。",
+  "version": "0.4.0",
+  "published_at": "2026-09-28T15:29:04+08:00",
+  "title": "漫剧创作工作流单入口发行与双端维护",
+  "summary": "发行入口改为 manju-creation-director，保留其既有业务规则、格式与知识版本。新增按清单构建的三类同内容安装包、可恢复安装器、只读更新检测、分阶段发布校验及官网清单生成，沿用原私有仓库、公开下载仓库和官网。",
+  "compatibility": "破坏性入口迁移：新版不再发行旧六组件或 Agent。旧含导演附件保持下架。业务版本仍为0.1.0-rc.2及既有本地修订，不把发行号当作创作能力全面验证。旧项目不静默迁移；安装器只安装新组件，旧入口退役和套件外路由需独立核查与备份。当前本机外部路由迁移尚未全部完成，文件安装与客户端实际加载分别验收，不承诺旧聊天热重载。",
   "components": [
     {
-      "id": "manju-asset-image-pipeline",
-      "name": "漫剧资产总控 Agent",
-      "change_type": "changed",
-      "summary": "新增FULL_PROJECT之外的四种定点操作模式、候选资产隔离、正式资产哈希锁、明确发布决策与事务清单；可按资产编号、规范化正式路径和当前文件SHA精确追溯旧生成记录及原始/最终提示词。新增只读操作检查器与9项场景测试，提示词追溯器扩展至10项场景；项目检查器同时接受旧prompt和新版final_compiled_prompt记录，并验证新版提示词哈希。"
+      "id": "manju-creation-director",
+      "name": "漫剧创作工作流",
+      "change_type": "added",
+      "summary": "作为唯一发行业务组件加入原发行体系，保留创作正文、模板和知识卡版本；增加维护发现及双端官网更新说明，移除发布者个人路径和用户指定的自有批注。"
     },
     {
       "id": "release-system",
       "name": "发行与安装系统",
       "change_type": "changed",
-      "summary": "WorkBuddy消费端把最新版检查与包下载源改为公开novel-manju-chain-site Release，源码溯源仍保留私有novel-manju-chain-suite；增加来源分离测试并登记0.3.8为已审查构建基线。"
+      "summary": "由版本清单决定组件和包集合；提供逐文件哈希、安装计划、冲突拒绝、事务恢复和公开更新检测。私有草稿回验后正式发布，再公开并匿名下载核验；禁用旧标签自动构建，不覆盖历史包。34项本地发行相关测试通过，网络发布及各宿主实际状态以独立回执为准。"
     },
     {
       "id": "website",
       "name": "中文官网",
       "change_type": "changed",
-      "summary": "从统一更新记录发布0.3.8说明、Codex与WorkBuddy下载链接及SHA256，公开下载仓库与官网保持同一版本。"
+      "summary": "改为漫剧创作工作流介绍和单入口安装说明，新版下载由同一发行清单生成，历史版本保留各自清单与撤回状态。19项本地网站测试通过，不再要求新版不存在的六组件下载。"
     }
   ],
+  "schema_version": 2,
+  "suite_version": "0.4.0",
+  "suite_name": "漫剧创作工作流",
+  "release_asset": "novel-manju-chain-suite-0.4.0.zip",
+  "release_sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+  "download_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/novel-manju-chain-suite-0.4.0.zip",
   "private_download": false,
-  "withdrawn": true,
-  "withdrawn_at": "2026-09-27T17:30:49.248108+00:00"
+  "release_url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/tag/0.4.0",
+  "distribution_schema": "MCD-DISTRIBUTION-1",
+  "assets": {
+    "suite": {
+      "name": "novel-manju-chain-suite-0.4.0.zip",
+      "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+      "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/novel-manju-chain-suite-0.4.0.zip"
+    },
+    "skill": {
+      "name": "manju-creation-director-0.4.0.zip",
+      "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+      "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/manju-creation-director-0.4.0.zip"
+    },
+    "workbuddy": {
+      "name": "manju-creation-director-0.4.0-workbuddy.zip",
+      "sha256": "49a734f821418dea3f95f11382a7bfccad8e95989c50547e26912c7a53bcf470",
+      "url": "https://github.com/mojingyeche/novel-manju-chain-site/releases/download/0.4.0/manju-creation-director-0.4.0-workbuddy.zip"
+    }
+  },
+  "business_versions": {
+    "manju-creation-director": "0.1.0-rc.2"
+  },
+  "knowledge_version": {
+    "manju-creation-director": "sha256:b5d769f1b65ee424634420c42c3e80eb9548c2bb9ac7e5892fe719e63632c405"
+  }
 }

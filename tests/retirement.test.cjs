@@ -23,12 +23,13 @@ test('retired packages have no live data download URLs',()=>{
   assert.ok(!fs.existsSync(path.join(root,'guides/manju-director-v5-2/index.html')));
   assert.ok(fs.existsSync(path.join(root,'guides/manju-creation-director/index.html')));
 });
-test('retirement renders retained independent packages but no suite installation',async()=>{
+test('withdrawn versions render no old suite installation',async()=>{
   const home = await render('site.js');
-  assert.equal(home.get('#release-link').href,'#install');
-  assert.match(home.get('#version-downloads').innerHTML,/short-drama-write/);
-  assert.doesNotMatch(home.get('#version-downloads').innerHTML,/href="[^"]*novel-manju-chain-suite-[^\"]*zip/);
+  if (load('latest').withdrawn) assert.equal(home.get('#release-link').href,'#install');
   const guide = await render('guide.js','short-drama-write');
-  assert.match(guide.get('#guide-downloads').innerHTML,/独立包/);
-  assert.doesNotMatch(guide.get('#guide-downloads').innerHTML,/复制.*安装指令/);
+  for(const row of load('versions').versions.filter(v=>v.withdrawn)) {
+    for(const html of [home.get('#version-downloads').innerHTML,guide.get('#guide-downloads').innerHTML]) {
+      assert.ok(!html.includes('releases/download/'+row.version+'/novel-manju-chain-suite-'));
+    }
+  }
 });
